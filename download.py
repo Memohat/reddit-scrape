@@ -1,23 +1,45 @@
 #!python3
 # Mehmet Hatip
-import requests, logging, os, praw, imgurpython, regex, configparser
+
+import os, praw, imgurpython, logging, configparser, sys, requests, regex
+
+def log_start():
+    logging.basicConfig(level=logging.DEBUG, format='%(message)s')
+    #logging.disable(logging.CRITICAL)
 
 def clients():
-    config = configparser.ConfigParser()
-    config.read('input.ini')
+    try:
+        config = configparser.ConfigParser()
+        config.read('client_info.ini')
 
-    reddit = praw.Reddit(
-    client_id = config['reddit']['client_id'],
-    client_secret = config['reddit']['client_secret'],
-    user_agent = config['reddit']['user_agent']
-    )
+        reddit = praw.Reddit(
+        client_id = config['reddit']['client_id'],
+        client_secret = config['reddit']['client_secret'],
+        user_agent = config['reddit']['user_agent']
+        )
+        imgur = imgurpython.ImgurClient(
+        client_id = config['imgur']['client_id'],
+        client_secret = config['imgur']['client_secret']
+        )
 
-    imgur = imgurpython.ImgurClient(
-    client_id = config['imgur']['client_id'],
-    client_secret = config['imgur']['client_secret']
-    )
+        return reddit, imgur
+    except Exception as e:
+        print(f'Error: {e}')
+        sys.exit()
 
-    return reddit, imgur
+
+def find_extension(url):
+    try:
+        ext = regex.search(r'(\.\w{3,5})(\?.{1,2})?$', url).group(1)
+        return ext
+    except:
+        return None
+
+def slim_title(title, limit):
+    name = regex.sub(r"[^\s\w',]", '', title).strip()
+    char_max = limit - len(os.path.abspath('.'))
+    name = name[:char_max-1] if len(name) >= char_max else name
+    return name
 
 def streamable_url(url):
     try:
@@ -43,13 +65,16 @@ def imgur_album(id):
     i = 1
 
     for item in images:
-        imgur_image(item.id)
+        imgur_image(item=item)
 
     logging.debug('\nFinished imgur album')
 
-def imgur_image(id):
+def imgur_image(id=None, item=None):
     i = 1
-    item = imgur.get_image(id)
+    try:
+        item = imgur.get_image(id)
+    except:
+        pass
     if item.animated:
         url = item.mp4
     else:
@@ -76,16 +101,22 @@ def make_dir(dir_name):
         os.mkdir(dir_name)
     os.chdir(dir_name)
 
-def download_subreddit(sub_name, section, posts):
+def download_subreddit(sub_name='pics', section='top', posts=10):
+    reddit, imgur = clients()
     try:
-        sub = reddit.subreddit(sub_name)
+        if sub_name == 'r':
+            sub = reddit.random_subreddit()
+        else:
+            sub = reddit.subreddit(sub_name)
         name = sub.display_name
         title = sub.title
         if sub.over18:
-            raise Exception
-    except:
-        logging.info('Subreddit not downloaded')
+            raise Exception('Nice try...')
+    except Exception as e:
+        print(f'Error: {e}')
         return
+
+    logging.debug('Subreddit downloaded')
 
     make_dir(sub.display_name)
     os.startfile('.')
@@ -99,6 +130,10 @@ def download_subreddit(sub_name, section, posts):
             text = submission.selftext
             extension = find_extension(url)
 
+            title_url = title + '.url'
+            if os.path.isfile(title_url):
+                raise Exception('File already exists')
+
             # logging
             logging.info("\nINFO\nInitial URL: " + str(url))
             logging.info("ID: " + submission.id)
@@ -108,8 +143,9 @@ def download_subreddit(sub_name, section, posts):
                 if submission.media['reddit_video']['is_gif']:
                     extension = '.mp4'
                 else:
-                    url_audio = re.sub(r'\/[^\/]+$',r'/audio', url)
-                    download_video(title, url, url_audio)
+                    url_audio = regex.sub(r'\/[^\/]+$',r'/audio', url)
+                    status = download_video(title, url, url_audio)
+                    logging.info(status)
                     continue
             elif bool(regex.search(r'streamable\.com\/\w+', url)):
                 url = streamable_url(url)
@@ -118,38 +154,31 @@ def download_subreddit(sub_name, section, posts):
                 url = gfycat_url(url)
                 extension = '.mp4'
             elif bool(regex.search(r'imgur', url)):
-                regex = re.search(r'(imgur.com\/)(\w+\/)?(\w+)(\.\w+)?(.*)?$', url)
-                domain, album, id, extension, bs = regex.groups()
+                reg = regex.search(r'(imgur.com\/)(\w+\/)?(\w+)(\.\w+)?(.*)?$', url)
+                domain, album, id, extension, bs = reg.groups()
                 logging.info('Imgur ID: ' + id)
 
                 if album:
                     imgur_album(id)
                 else:
-                    imgur_image(id)
+                    imgur_image(id=id)
                 continue
             elif text:
                 extension = '.txt'
+            name = title + extension
+            status = download_file(name, url, text)
+            logging.info(status)
 
-            try:
-                name = title + extension
-                url_name = title + '.url'
-                if os.path.isfile(name) or os.path.isfile(url_name):
-                    continue
-                status = download.download_file(name, url, text)
-                print(status)
-            except:
-                None
-            finally:
-                url_name = title + '.url'
-                url = 'https://www.reddit.com' + submission.permalink
-                text = '[InternetShortcut]\nURL=%s' % url
-                download.download_file(url_name, url, text)
+            url = 'https://www.reddit.com' + submission.permalink
+            text = '[InternetShortcut]\nURL=%s' % url
+            status = download_file(title_url, url, text)
+            logging.debug(status)
 
             if get_size():
                 automation = False
-                print(f'\n{"*"*20}\n{storage} gigabytes reached.\n{"*"*20}\n')
-        except:
-            pass
+                raise Exception(f'\n{"*"*20}\n{storage} gigabytes reached.\n{"*"*20}\n')
+        except Exception as e:
+            print(f'Error: {e}')
 
 def download_file(name, url, text):
     try:
@@ -163,39 +192,31 @@ def download_file(name, url, text):
             for chunk in res:
                 saveFile.write(chunk)
         saveFile.close()
-        return f'{name} successfully downloaded'
-    except:
-        logging.info(f'{name} could not be downloaded')
+        return f'File successfully downloaded'
+    except Exception as e:
+        return (f'Error: {e}')
 
 def download_video(name, video, audio):
     try:
-        if not os.path.isfile(name):
-            name = slim_title(name) + '.mp4'
-            logging.info(f'Video name: {name}')
-            download_file(name, video)
-            try:
-                download_file('audio.mp3', audio)
-            except:
-                logging.info('Video doesn\'t have audio')
-                if os.path.isfile('audio.mp3'):
-                    os.remove('audio.mp3')
-            else:
-                cmd = "ffmpeg -i %s -i %s -c:v copy -c:a aac -strict experimental %s"
-                cmd = cmd % (name, 'audio.mp3', 'combined.mp4')
-                with open(os.devnull, 'w') as devnull:
-                    subprocess.run(cmd, stdout=devnull)
-                os.remove(name)
-                os.remove('audio.mp3')
-                os.rename('combined.mp4', name)
-                logging.info('Video/audio combined')
-            logging.info('Downloaded video with audio')
-        else:
-            return str(f'{name} already exists')
-    except:
-        return str(f'{name} could not be downloaded')
+        name = slim_title(name) + '.mp4'
+        if os.path.isfile(name):
+            raise Exception('File already exists')
+        logging.info(f'Video name: {name}')
+        download_file('video.mp4', video)
+        download_file('audio.mp3', audio)
+        cmd = "ffmpeg -i %s -i %s -c:v copy -c:a aac -strict experimental %s"
+        cmd = cmd % ('video.mp4', 'audio.mp3', 'combined.mp4')
+        with open(os.devnull, 'w') as devnull:
+            subprocess.run(cmd, stdout=devnull)
+        os.remove('video.mp4')
+        os.remove('audio.mp3')
+        os.rename('combined.mp4', name)
+        return f'File successfully downloaded'
+    except Exception as e:
+        return f'Error: {e}'
 
 def main():
-    None
+    download_subreddit()
 
 if __name__=='__main__':
     main()

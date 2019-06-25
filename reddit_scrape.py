@@ -1,15 +1,17 @@
 #! python3
 # Mehmet Hatip API Test
 
-import requests, json, , os, shutil, logging, configparser
-import re, pprint, sys, time, random, subprocess, download
+import requests, json, praw, os, shutil, logging
+import re, pprint, sys, time, random, subprocess
+from imgurpython import ImgurClient
 
 
-logging.basicConfig(level=logging.CRITICAL, format='%(message)s')
-#logging.disable(logging.CRITICAL)
+logging.basicConfig(level=logging.DEBUG, format='%(message)s')
+logging.disable(logging.CRITICAL)
 data_file_name = 'Reddit scrape'
 msg_exit_format = 'Exiting to main menu: {0}'
 section, posts, storage = 'top', 10, 1.0
+
 
 def find_extension(url):
     try:
@@ -18,11 +20,60 @@ def find_extension(url):
     except:
         return None
 
+def download_file(name, url, text=None):
+    try:
+        if not os.path.isfile(name):
+            if text:
+                saveFile = open(name, 'w')
+                saveFile.write(text)
+            else:
+                res = requests.get(url, stream=True)
+                #res.raise_for_status()
+                saveFile = open(name, 'wb')
+                for chunk in res:
+                    saveFile.write(chunk)
+            saveFile.close()
+            return str(f'Downloaded {name}')
+        else:
+            return str(f'{name} already exists')
+    except:
+        return str(f'{name} could not be downloaded')
 
+def download_video(name, video, audio):
+    try:
+        if not os.path.isfile(name):
+            name = slim_title(name) + '.mp4'
+            logging.info(f'Video name: {name}')
+            download_file(name, video)
+            try:
+                download_file('audio.mp3', audio)
+            except:
+                logging.info('Video doesn\'t have audio')
+                if os.path.isfile('audio.mp3'):
+                    os.remove('audio.mp3')
+            else:
+                cmd = "ffmpeg -i %s -i %s -c:v copy -c:a aac -strict experimental %s"
+                cmd = cmd % (name, 'audio.mp3', 'combined.mp4')
+                with open(os.devnull, 'w') as devnull:
+                    subprocess.run(cmd, stdout=devnull)
+                os.remove(name)
+                os.remove('audio.mp3')
+                os.rename('combined.mp4', name)
+                logging.info('Video/audio combined')
+            logging.info('Downloaded video with audio')
+        else:
+            return str(f'{name} already exists')
+    except:
+        return str(f'{name} could not be downloaded')
 
-def slim_title(title, limit):
+def make_dir(dir_name):
+    if not os.path.isdir(dir_name):
+        os.mkdir(dir_name)
+    os.chdir(dir_name)
+
+def slim_title(title):
     name = re.sub(r"[^\s\w',]", '', title).strip()
-    char_max = limit - len(os.path.abspath('.'))
+    char_max = 250 - len(os.path.abspath('.'))
     name = name[:char_max-1] if len(name) >= char_max else name
     return name
 
@@ -42,6 +93,20 @@ def get_size(start_path=os.getcwd()):
         print(msg_exit_format.format(f'Reached {storage} gigabyte(s)'))
     return exceeded
 
+def clients():
+    reddit = praw.Reddit(
+    client_id='TNXJh1DaoUyO1w',
+    client_secret='hKfekLF_vORYMV4-XQEm3iNz55Q',
+    user_agent='windows:my_script:1.0 (by /u/memohat)'
+    )
+
+    imgur = ImgurClient(
+    client_id='39b04bdb6b54455',
+    client_secret='9017657f85f04d1e32bb1f573102f8ec110ddc09'
+    )
+
+    return reddit, imgur
+
 def settings():
     choices = ['hot', 'top', 'new']
     global section
@@ -57,7 +122,7 @@ def settings():
     while True:
         try:
             posts = int(input(msg) or posts)
-            if posts >= 1:
+            if posts >= 1 and posts <= 999:
                 break
         except:
             None
@@ -74,7 +139,13 @@ def settings():
             None
         print('Error, try again')
 
-
+def subreddit_param(sub):
+    if section == 'top':
+        return sub.top(limit=posts)
+    elif section == 'hot':
+        return sub.hot(limit=posts)
+    elif section == 'new':
+        return sub.new(limit=posts)
 
 def get_subreddit(automate):
     prompt = ("Enter name of subreddits, separate with space\n\t"
@@ -98,13 +169,9 @@ def get_subreddit(automate):
     return inp
 
 def main():
-    try:
-        reddit, imgur = clients()
-    except:
-        print('Connection could not be established' +
-              '\nCheck network connection\nExiting')
-        sys.exit()
     settings()
+
+    reddit, imgur = clients()
     make_dir(data_file_name)
     inp = None
     logging.debug('Start of while loop')
@@ -117,18 +184,12 @@ def main():
             automate = True
             continue
         elif inp == 'del':
-            while True:
-                del_sub = input('Enter subreddit to be deleted: ')
-                try:
-                    shutil.rmtree(del_sub)
-                except:
-                    print(f'{del_sub} could not be deleted\n' +
-                          'Make sure no program is using the file and ' +
-                          'the name is spelled correctly')
-                    continue
-                else:
-                    print(f'{del_sub} successfully deleted')
-                    break
+            del_sub = input('Enter subreddit to be deleted: ')
+            if os.path.isdir(del_sub):
+                shutil.rmtree(del_sub)
+                print(f'{del_sub} successfully deleted')
+            else:
+                print(f'Error: {del_sub} was not found')
             continue
         elif inp == 's':
             settings()
@@ -155,21 +216,19 @@ def main():
 
         print('{:<22}: '.format(name) + title + '\n')
         make_dir(sub.display_name)
-        subprocess.run('start .', shell=True)
+
 
         for submission in subreddit_param(sub):
-            if submission.over_18:
-                continue
             url = submission.url
-            title = slim_title(submission.title, 250)
+            title = slim_title(submission.title)
             text = submission.selftext
             extension = find_extension(url)
 
             # logging
-            logging.info("\nINFO\nInitial URL: " + str(url))
+            logging.info("Initial URL: " + str(url))
             logging.info("ID: " + submission.id)
             variables = pprint.pformat(vars(submission))
-            #logging.info(variables)
+            #logging.debug(variables)
 
             if submission.is_reddit_media_domain and submission.is_video:
                 url = submission.media['reddit_video']['fallback_url']
@@ -177,7 +236,7 @@ def main():
                     extension = '.mp4'
                 else:
                     url_audio = re.sub(r'\/[^\/]+$',r'/audio', url)
-                    download.download_video(title, url, url_audio)
+                    download_video(title, url, url_audio)
                     continue
             elif bool(re.search(r'streamable\.com\/\w+', url)):
                 try:
@@ -186,7 +245,7 @@ def main():
                     url = 'http:' + req.json()['files']['mp4']['url']
                     extension = 'mp4'
                 except:
-                    logging.info('streamable page not found')
+                    logging.debug('streamable page not found')
                     continue
             elif bool(re.search(r'gfycat\.com\/\w+', url)):
                 try:
@@ -197,7 +256,7 @@ def main():
                     if not extension:
                         raise Exception
                 except:
-                    logging.info('gfycat page not found')
+                    logging.debug('gfycat page not found')
                     continue
 
             elif bool(re.search(r'imgur', url)):
@@ -208,7 +267,9 @@ def main():
                 try:
                     if album:
                         images = imgur.get_album_images(id)
-                        logging.debug(f'Downloading imgur album')
+                        folder_name = str(title + '_' + id)
+                        make_dir(folder_name)
+                        logging.debug(f'Downloading imgur album to "{folder_name}"', end='')
                         i = 1
 
                         for item in images:
@@ -225,11 +286,12 @@ def main():
                                 title = 'Untitled' + str(i)
                                 i += 1
 
-                            status = download.download_file(title + extension, url)
-                            print(status)
+                            status = download_file(title + extension, url)
 
                         logging.debug('\nFinished imgur album')
+                        os.chdir('..')
                         continue
+
                     else:
                         item = imgur.get_image(id)
                         if item.animated:
@@ -241,31 +303,26 @@ def main():
                     logging.debug("Error, imgur file is missing, skipping")
                     continue
             elif text:
-                extension = '.txt'
-
-            try:
-                name = title + extension
-                url_name = title + '.url'
-                if os.path.isfile(name) or os.path.isfile(url_name):
-                    continue
-                status = download.download_file(name, url, text)
-                print(status)
-            except:
-                None
-            finally:
-                url_name = title + '.url'
-                url = 'https://www.reddit.com' + submission.permalink
+                # WORK HERE REVISE DOWNLOAD FILE TO GET BOTH URL LINK AND TEXT FILE    
                 text = '[InternetShortcut]\nURL=%s' % url
-                download.download_file(url_name, url, text)
+                extension = '.url'
+
+            logging.info('Download URL: ' + url)
+            name = title + extension
+
+            print(f'Downloading {name}')
+
+            status = download_file(name, url, text=text)
+            logging.debug(status)
 
             if get_size():
                 automation = False
                 print(f'\n{"*"*20}\n{storage} gigabytes reached.\n{"*"*20}\n')
                 break
 
+
         while not os.path.basename(os.getcwd()) == data_file_name:
             os.chdir("..")
         print('Done\n')
-
 if __name__ == '__main__':
     main()

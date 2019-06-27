@@ -1,8 +1,8 @@
 #!python3
 # Mehmet Hatip API Test
 try:
-    import os, shutil, logging, sys, download, configparser
-except e as Exception:
+    import os, shutil, logging, sys, download, configparser, time
+except Exception as e:
     print(f'Error: {e}')
     sys.exit()
 
@@ -10,7 +10,7 @@ logging.basicConfig(
 filename='log.txt',
 filemode='w',
 level=logging.DEBUG,
-format='%(message)s')
+format='%(asctime)s %(message)s')
 
 filename = os.path.abspath(
 os.path.join(os.path.dirname(__file__), 'settings.ini')
@@ -19,60 +19,75 @@ config = configparser.ConfigParser()
 config.read(filename)
 logging.info(f'Filename: \'{filename}\'')
 
+DATA_FILENAME = 'Reddit scrape'
+
 
 DEFAULT = config['default']
 SUB_NAME = DEFAULT.get('sub_name', 'pics')
 SECTION = DEFAULT.get('section', 'hot')
+TIME_FILTER = DEFAULT.get('time_filter', 'all')
 POSTS = DEFAULT.getint('posts', 10)
 STORAGE = DEFAULT.getfloat('storage', '.1')
 
-
-def settings(sub_name, section, posts, storage):
-
+def settings(sub_name, section, time_filter, posts, storage):
     logging.info('\nStarted settings')
     choices = ['hot', 'top', 'new', 'cont']
-    msg = [
-    f'Enter default subreddit (Curr={sub_name})',
-    f'Enter {", ".join(choices[:-1])}, or {choices[-1]} (Curr={section})',
-    f'Enter number of posts (Curr={posts})',
-    f'Enter maximum gigabyte capacity (Curr={storage})'
-    ]
-    logging.info(f'msg: "{msg}"')
-    max_width = len(max(msg, key=len))
+    choices2 = ['hour', 'week', 'day', 'month', 'year', 'all']
+
+    msg = {
+    'sub_name': f'Enter default subreddit (Curr={sub_name})',
+    'section': f'Enter {", ".join(choices[:-1])}, or {choices[-1]} (Curr={section})',
+    'time_filter': f'Enter {", ".join(choices2[:-1])}, or {choices2[-1]} (Curr={time_filter})',
+    'posts': f'Enter number of posts (Curr={posts})',
+    'storage': f'Enter maximum gigabyte capacity (Curr={storage})'
+    }
+    max_width = len(max(msg.values(), key=len))
     temp = '{:<%s} : ' % str(max_width)
 
     logging.info(f'Template: "{temp}"')
-    for i in range(len(msg)):
-        msg[i] = temp.format(msg[i])
-        logging.info(f'Message {i+1}: {msg[i]}')
-    sub_name = input(msg[0]) or sub_name
+
+    sub_name = input(temp.format(msg['sub_name'])) or sub_name
+
     while True:
-        section = input(msg[1]).lower() or section
+        section = input(temp.format(msg['section']))  or section
         if section in choices:
             break
         logging.info('Error: Input is not in options')
 
-    while True:
-        try:
-            posts = int(input(msg[2]) or posts)
-            if posts < 1:
-                raise Exception
-            break
-        except:
-            print('Error: Enter integer larger than 0')
+    if section not in ['new', 'hot']:
+        while True:
+            time_filter = input(temp.format(msg['time_filter'])) or time_filter
+            if time_filter in choices2:
+                break
+            logging.info('Error: Input is not in options')
 
     while True:
         try:
-            storage = float(input(msg[3]) or storage)
-            if storage <= 0:
-                raise Exception
+            posts = int(input(temp.format(msg['posts'])) or posts)
+            logging.info(f'Posts: \'{posts}\'')
+            if posts < 1:
+                raise Exception('Enter integer larger than 0')
             break
-        except:
-            print('Error: Enter float number larger than 0')
+        except Exception as e:
+            print(f'Error: {e}')
+            posts = None
+
+    while True:
+        try:
+            storage = float(input(temp.format(msg['storage'])) or storage)
+            logging.info(f'Storage: \'{storage}\'')
+            if storage <= 0:
+                raise Exception('Enter float number larger than 0')
+            break
+        except Exception as e:
+            print(f'Error: {e}')
+
+
 
     global DEFAULT, SUB_NAME, SECTION, POSTS, STORAGE
     DEFAULT['sub_name'], SUB_NAME = str(sub_name), sub_name
     DEFAULT['section'], SECTION = str(section), section
+    DEFAULT['time_filter'], TIME_FILTER = str(time_filter), time_filter
     DEFAULT['posts'], POSTS = str(posts), posts
     DEFAULT['storage'], STORAGE = str(storage), storage
     with open(filename, 'w') as fin:
@@ -100,34 +115,33 @@ def prompt(automate):
         inp = 'r'
     return inp.lower().strip()
 
-def delete_directory(del_sub = None):
-    if not del_sub:
-        del_sub = input('Enter subreddit to be deleted: ').lower().strip()
+def delete_directory(del_dir = None):
+    if not del_dir:
+        del_dir = input('Enter subreddit to be deleted: ').lower().strip()
     try:
-        shutil.rmtree(del_sub)
+        shutil.rmtree(del_dir)
     except:
         return (
-        f'Error: {del_sub} could not be deleted\n' +
+        f'Error: {del_dir} could not be deleted\n' +
         'Make sure no program is using the file and the name is spelled correctly'
         )
     else:
-        return f'{del_sub} successfully deleted'
+        return f'{del_dir} successfully deleted'
 
 def test():
-    delete_directory(del_sub=SUB_NAME)
-    os.chdir(data_file_name)
-    download.download_subreddit(SUB_NAME, SECTION, POSTS, STORAGE)
-    os.chdir('..')
+    assert os.path.basename(os.getcwd()) == 'reddit-scrape'
+    delete_directory(del_dir=DATA_FILENAME)
+    download.make_dir(DATA_FILENAME)
+    download.download_subreddit('wallpapers', 'top', 'all', 100, 100)
     os.startfile('.')
 
 def main():
-    if False:
+    if True:
         test()
         return
-    data_file_name = 'Reddit scrape'
-    status = delete_directory(data_file_name)
+    status = delete_directory(DATA_FILENAME)
     logging.info(status)
-    download.make_dir(data_file_name)
+    download.make_dir(DATA_FILENAME)
     logging.info('Start of while loop')
     automate = False
     while True:
@@ -136,9 +150,9 @@ def main():
             logging.debug(f'Input: {inp}')
 
             if inp not in ['rr','del','s','e']:
-                if download.download_subreddit(inp, SECTION, POSTS, STORAGE):
+                if download.download_subreddit(inp, SECTION, TIME_FILTER, POSTS, STORAGE):
                     automate = False
-                while not os.path.basename(os.getcwd()) == data_file_name:
+                while not os.path.basename(os.getcwd()) == DATA_FILENAME:
                     os.chdir("..")
             elif inp == 'rr':
                 automate = True
@@ -146,13 +160,13 @@ def main():
                 status = delete_directory()
                 print(status)
             elif inp == 's':
-                settings(SUB_NAME, SECTION, POSTS, STORAGE)
+                settings(SUB_NAME, SECTION, TIME_FILTER, POSTS, STORAGE)
             elif inp == 'e':
                 print('Exiting')
                 logging.info('**********\nEND HERE\n**********')
                 #os.startfile('.')
                 break
-        except e as Exception:
+        except Exception as e:
             print(f'Error: {e}')
 
 if __name__ == '__main__':

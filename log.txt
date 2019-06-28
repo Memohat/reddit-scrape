@@ -1,1468 +1,1604 @@
-2019-06-27 16:26:40,480 Filename: 'C:\Users\ithatim\GitHub\reddit-scrape\settings.ini'
-2019-06-27 16:26:40,520 get_size gigs: '0.0'
-2019-06-27 16:26:40,523 Fetching: GET https://oauth.reddit.com/r/wallpapers/about/
-2019-06-27 16:26:40,523 Data: None
-2019-06-27 16:26:40,523 Params: {'raw_json': 1}
-2019-06-27 16:26:40,526 Starting new HTTPS connection (1): www.reddit.com:443
-2019-06-27 16:26:40,831 https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 200 106
-2019-06-27 16:26:40,840 Starting new HTTPS connection (1): oauth.reddit.com:443
-2019-06-27 16:26:41,151 https://oauth.reddit.com:443 "GET /r/wallpapers/about/?raw_json=1 HTTP/1.1" 200 3711
-2019-06-27 16:26:41,152 Response: 200 (3711 bytes)
-2019-06-27 16:26:41,153 
+16:59:13 Filename: 'C:\Users\ithatim\GitHub\reddit-scrape\settings.ini'
+16:59:13 Fetching: GET https://oauth.reddit.com/r/wallpapers/about/
+16:59:13 Data: None
+16:59:13 Params: {'raw_json': 1}
+16:59:13 Starting new HTTPS connection (1): www.reddit.com:443
+16:59:14 https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 200 106
+16:59:14 Starting new HTTPS connection (1): oauth.reddit.com:443
+16:59:14 https://oauth.reddit.com:443 "GET /r/wallpapers/about/?raw_json=1 HTTP/1.1" 200 3711
+16:59:14 Response: 200 (3711 bytes)
+16:59:14 
 Subreddit wallpapers downloaded
 
-2019-06-27 16:26:41,159 Start submission download
-2019-06-27 16:26:41,160 Fetching: GET https://oauth.reddit.com/r/wallpapers/top
-2019-06-27 16:26:41,160 Data: None
-2019-06-27 16:26:41,160 Params: {'t': 'all', 'limit': 100, 'raw_json': 1}
-2019-06-27 16:26:42,389 https://oauth.reddit.com:443 "GET /r/wallpapers/top?t=all&limit=100&raw_json=1 HTTP/1.1" 200 57526
-2019-06-27 16:26:42,463 Response: 200 (57526 bytes)
-2019-06-27 16:26:42,482 End submission download
-2019-06-27 16:26:42,482 top, all, 100
-2019-06-27 16:26:42,482 Thread 1 gets [0:33]
-2019-06-27 16:26:42,484 Thread 2 gets [33:66]
-2019-06-27 16:26:42,485 Thread 3 gets [66:99]
-2019-06-27 16:26:42,486 
-SUBMISSION INFO
+16:59:14 Start submission download
+16:59:14 Fetching: GET https://oauth.reddit.com/r/wallpapers/top
+16:59:14 Data: None
+16:59:14 Params: {'t': 'all', 'limit': 100, 'raw_json': 1}
+16:59:15 https://oauth.reddit.com:443 "GET /r/wallpapers/top?t=all&limit=100&raw_json=1 HTTP/1.1" 200 57522
+16:59:15 Response: 200 (57522 bytes)
+16:59:16 End submission download
+16:59:16 top, all, 100
+16:59:16 Thread 1 gets [0:33]
+16:59:16 Thread 2 gets [33:66]
+16:59:16 Thread 3 gets [66:100]
+16:59:16 
+SUBMISSION INFO THREAD 0
 	Initial URL: http://i.imgur.com/5yeBVeM.jpg
 	ID: 2rr9ec
 	Title: Softened a photo I took of Hollywood blvd
-2019-06-27 16:26:42,486 
-SUBMISSION INFO
-	Initial URL: http://fc00.deviantart.net/fs71/f/2014/337/9/9/cargo_ship_by_stoupa-d88j33s.jpg
-	ID: 2qg2wp
-	Title: FedEx Cargo Ship
-2019-06-27 16:26:42,486 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:16 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/ofas72yn1kt01.jpg
 	ID: 8e7k5i
 	Title: Ghost in the Shell
-2019-06-27 16:26:42,488 Imgur ID: 5yeBVeM
-2019-06-27 16:26:42,492 Starting new HTTP connection (1): fc00.deviantart.net:80
-2019-06-27 16:26:42,496 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:42,499 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:42,740 https://i.redd.it:443 "GET /ofas72yn1kt01.jpg HTTP/1.1" 200 839141
-2019-06-27 16:26:42,767 http://fc00.deviantart.net:80 "GET /fs71/f/2014/337/9/9/cargo_ship_by_stoupa-d88j33s.jpg HTTP/1.1" 301 178
-2019-06-27 16:26:42,783 Starting new HTTP connection (1): orig12.deviantart.net:80
-2019-06-27 16:26:42,798 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:42,798 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:43,060 http://orig12.deviantart.net:80 "GET /5c8a/f/2014/337/9/9/cargo_ship_by_stoupa-d88j33s.jpg HTTP/1.1" 200 748167
-2019-06-27 16:26:43,079 File successfully downloaded
-2019-06-27 16:26:43,167 https://api.imgur.com:443 "GET /3/image/5yeBVeM HTTP/1.1" 200 389
-2019-06-27 16:26:43,182 get_size gigs: '0.0'
-2019-06-27 16:26:43,187 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:43,187 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:16 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://fc00.deviantart.net/fs71/f/2014/337/9/9/cargo_ship_by_stoupa-d88j33s.jpg
+	ID: 2qg2wp
+	Title: FedEx Cargo Ship
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:16 Lock acquired to download file
+16:59:16 Domain: "imgur.com/" Album: "None" ID: "5yeBVeM" ext: ".jpg" bs: ""
+16:59:16 Starting new HTTPS connection (1): i.redd.it:443
+16:59:16 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:16 https://i.redd.it:443 "GET /ofas72yn1kt01.jpg HTTP/1.1" 200 839141
+16:59:16 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:16 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:16 File successfully downloaded
+16:59:16 Lock released
+16:59:16 Lock acquired to download file
+16:59:16 Starting new HTTP connection (1): fc00.deviantart.net:80
+16:59:16 
+SUBMISSION INFO THREAD 1
 	Initial URL: http://i.imgur.com/4iD2Xmb.jpg
 	ID: 4vs7of
 	Title: The hash slinging slasher
-2019-06-27 16:26:43,193 Imgur ID: 4iD2Xmb
-2019-06-27 16:26:43,199 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:43,376 File successfully downloaded
-2019-06-27 16:26:43,418 get_size gigs: '0.0'
-2019-06-27 16:26:43,419 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:16 Domain: "imgur.com/" Album: "None" ID: "4iD2Xmb" ext: ".jpg" bs: ""
+16:59:16 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:16 https://api.imgur.com:443 "GET /3/image/5yeBVeM HTTP/1.1" 200 393
+16:59:16 Imgur link: https://i.imgur.com/5yeBVeM.jpg
+16:59:17 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:17 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:17 http://fc00.deviantart.net:80 "GET /fs71/f/2014/337/9/9/cargo_ship_by_stoupa-d88j33s.jpg HTTP/1.1" 301 178
+16:59:17 Starting new HTTP connection (1): orig12.deviantart.net:80
+16:59:17 https://api.imgur.com:443 "GET /3/image/4iD2Xmb HTTP/1.1" 200 379
+16:59:17 Imgur link: https://i.imgur.com/4iD2Xmb.jpg
+16:59:17 http://orig12.deviantart.net:80 "GET /5c8a/f/2014/337/9/9/cargo_ship_by_stoupa-d88j33s.jpg HTTP/1.1" 200 748167
+16:59:17 File successfully downloaded
+16:59:17 Lock released
+16:59:17 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:17 
+SUBMISSION INFO THREAD 2
 	Initial URL: http://i.imgur.com/dDWSYh6.jpg
 	ID: 3yjn3h
 	Title: Edward Snowden on the nothing to hide argument
-2019-06-27 16:26:43,420 Imgur ID: dDWSYh6
-2019-06-27 16:26:43,426 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:43,438 https://i.imgur.com:443 "GET /5yeBVeM.jpg HTTP/1.1" 200 805461
-2019-06-27 16:26:43,455 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:43,463 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:43,634 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:43,649 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:43,711 https://api.imgur.com:443 "GET /3/image/4iD2Xmb HTTP/1.1" 200 378
-2019-06-27 16:26:43,717 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:43,717 File successfully downloaded
-2019-06-27 16:26:43,767 get_size gigs: '0.0'
-2019-06-27 16:26:43,767 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:17 Domain: "imgur.com/" Album: "None" ID: "dDWSYh6" ext: ".jpg" bs: ""
+16:59:17 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:17 https://i.imgur.com:443 "GET /5yeBVeM.jpg HTTP/1.1" 200 805461
+16:59:17 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:17 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:18 https://api.imgur.com:443 "GET /3/image/dDWSYh6 HTTP/1.1" 200 388
+16:59:18 Imgur link: https://i.imgur.com/dDWSYh6.jpg
+16:59:18 File successfully downloaded
+16:59:18 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:18 
+SUBMISSION INFO THREAD 0
 	Initial URL: http://i.imgur.com/Z6kdWmA.jpg
 	ID: 6sbqwi
 	Title: Jaime Lannister
-2019-06-27 16:26:43,767 Imgur ID: Z6kdWmA
-2019-06-27 16:26:43,767 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:43,954 https://i.imgur.com:443 "GET /4iD2Xmb.jpg HTTP/1.1" 200 495449
-2019-06-27 16:26:43,974 https://api.imgur.com:443 "GET /3/image/dDWSYh6 HTTP/1.1" 200 387
-2019-06-27 16:26:43,979 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:43,988 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:43,997 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:44,117 https://i.imgur.com:443 "GET /dDWSYh6.jpg HTTP/1.1" 200 254949
-2019-06-27 16:26:44,200 https://api.imgur.com:443 "GET /3/image/Z6kdWmA HTTP/1.1" 200 377
-2019-06-27 16:26:44,200 File successfully downloaded
-2019-06-27 16:26:44,200 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:44,294 get_size gigs: '0.0'
-2019-06-27 16:26:44,295 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:18 Domain: "imgur.com/" Album: "None" ID: "Z6kdWmA" ext: ".jpg" bs: ""
+16:59:18 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:18 https://i.imgur.com:443 "GET /4iD2Xmb.jpg HTTP/1.1" 200 495449
+16:59:18 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:18 File successfully downloaded
+16:59:18 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:18 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:18 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/vblvokprzlny.jpg
 	ID: 61hh7x
 	Title: A tit showing off its prey
-2019-06-27 16:26:44,303 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:44,310 File successfully downloaded
-2019-06-27 16:26:44,360 get_size gigs: '0.0'
-2019-06-27 16:26:44,361 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:18 https://i.imgur.com:443 "GET /dDWSYh6.jpg HTTP/1.1" 200 254949
+16:59:18 https://api.imgur.com:443 "GET /3/image/Z6kdWmA HTTP/1.1" 200 380
+16:59:18 Imgur link: https://i.imgur.com/Z6kdWmA.jpg
+16:59:19 File successfully downloaded
+16:59:19 Lock acquired to download file
+16:59:19 Starting new HTTPS connection (1): i.redd.it:443
+16:59:19 
+SUBMISSION INFO THREAD 2
 	Initial URL: https://imgur.com/StsRgCA
 	ID: 7lvr5x
 	Title: SpaceX Falcon 9 Launch 2048 x 1366
-2019-06-27 16:26:44,361 Imgur ID: StsRgCA
-2019-06-27 16:26:44,368 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:44,380 https://i.imgur.com:443 "GET /Z6kdWmA.jpg HTTP/1.1" 200 300668
-2019-06-27 16:26:44,534 File successfully downloaded
-2019-06-27 16:26:44,567 get_size gigs: '0.0'
-2019-06-27 16:26:44,567 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/ezOgN0q.jpg
-	ID: 6xrip7
-	Title: Eclipse
-2019-06-27 16:26:44,567 Imgur ID: ezOgN0q
-2019-06-27 16:26:44,584 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:44,663 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:44,673 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:44,734 https://i.redd.it:443 "GET /vblvokprzlny.jpg HTTP/1.1" 200 84042
-2019-06-27 16:26:44,754 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:44,763 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:44,881 https://api.imgur.com:443 "GET /3/image/StsRgCA HTTP/1.1" 200 380
-2019-06-27 16:26:44,886 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:44,917 File successfully downloaded
-2019-06-27 16:26:44,967 get_size gigs: '0.0'
-2019-06-27 16:26:44,967 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:19 Domain: "imgur.com/" Album: "None" ID: "StsRgCA" ext: "None" bs: ""
+16:59:19 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:19 https://i.redd.it:443 "GET /vblvokprzlny.jpg HTTP/1.1" 200 84042
+16:59:19 File successfully downloaded
+16:59:19 Lock released
+16:59:19 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:19 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://imgur.com/wFrXNDx
 	ID: 4t9j7p
 	Title: Chivalry 1920 x 1306
-2019-06-27 16:26:44,967 Imgur ID: wFrXNDx
-2019-06-27 16:26:44,967 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:44,984 https://api.imgur.com:443 "GET /3/image/ezOgN0q HTTP/1.1" 200 377
-2019-06-27 16:26:44,991 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:45,051 https://i.imgur.com:443 "GET /StsRgCA.jpg HTTP/1.1" 200 799804
-2019-06-27 16:26:45,156 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:45,165 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:45,170 https://i.imgur.com:443 "GET /ezOgN0q.jpg HTTP/1.1" 200 505899
-2019-06-27 16:26:45,334 File successfully downloaded
-2019-06-27 16:26:45,424 File successfully downloaded
-2019-06-27 16:26:45,450 get_size gigs: '0.0'
-2019-06-27 16:26:45,450 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:19 Domain: "imgur.com/" Album: "None" ID: "wFrXNDx" ext: "None" bs: ""
+16:59:19 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:19 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:19 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:19 https://i.imgur.com:443 "GET /Z6kdWmA.jpg HTTP/1.1" 200 300668
+16:59:19 File successfully downloaded
+16:59:19 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/ezOgN0q.jpg
+	ID: 6xrip7
+	Title: Eclipse
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:19 Domain: "imgur.com/" Album: "None" ID: "ezOgN0q" ext: ".jpg" bs: ""
+16:59:19 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:19 https://api.imgur.com:443 "GET /3/image/StsRgCA HTTP/1.1" 200 379
+16:59:19 Imgur link: https://i.imgur.com/StsRgCA.jpg
+16:59:19 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:19 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:19 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:19 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:19 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:20 https://i.imgur.com:443 "GET /StsRgCA.jpg HTTP/1.1" 200 799804
+16:59:20 https://api.imgur.com:443 "GET /3/image/wFrXNDx HTTP/1.1" 200 378
+16:59:20 Imgur link: https://i.imgur.com/wFrXNDx.jpg
+16:59:20 https://api.imgur.com:443 "GET /3/image/ezOgN0q HTTP/1.1" 200 377
+16:59:20 Imgur link: https://i.imgur.com/ezOgN0q.jpg
+16:59:20 File successfully downloaded
+16:59:20 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:20 
+SUBMISSION INFO THREAD 2
 	Initial URL: http://i.imgur.com/z99lTdC.jpg
 	ID: 2ufta7
 	Title: Low Poly Dog
-2019-06-27 16:26:45,450 Imgur ID: z99lTdC
-2019-06-27 16:26:45,450 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:45,482 https://api.imgur.com:443 "GET /3/image/wFrXNDx HTTP/1.1" 200 381
-2019-06-27 16:26:45,492 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:45,494 get_size gigs: '0.0'
-2019-06-27 16:26:45,495 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/X39qMYI.jpg
-	ID: 38fhwr
-	Title: Autism Leaves
-2019-06-27 16:26:45,495 Imgur ID: X39qMYI
-2019-06-27 16:26:45,507 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:45,634 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:45,634 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:45,671 https://i.imgur.com:443 "GET /wFrXNDx.jpg HTTP/1.1" 200 778811
-2019-06-27 16:26:45,690 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:45,697 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:45,917 File successfully downloaded
-2019-06-27 16:26:45,950 https://api.imgur.com:443 "GET /3/image/X39qMYI HTTP/1.1" 200 381
-2019-06-27 16:26:45,958 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:45,972 get_size gigs: '0.01'
-2019-06-27 16:26:45,972 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:20 Domain: "imgur.com/" Album: "None" ID: "z99lTdC" ext: ".jpg" bs: ""
+16:59:20 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:20 https://i.imgur.com:443 "GET /wFrXNDx.jpg HTTP/1.1" 200 778811
+16:59:20 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:20 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:20 File successfully downloaded
+16:59:20 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:20 https://api.imgur.com:443 "GET /3/image/z99lTdC HTTP/1.1" 200 377
+16:59:20 Imgur link: https://i.imgur.com/z99lTdC.jpg
+16:59:20 
+SUBMISSION INFO THREAD 1
 	Initial URL: http://i.imgur.com/sXNLRVW.jpg
 	ID: 6x5uir
 	Title: Ghost in the Shell
-2019-06-27 16:26:45,973 Imgur ID: sXNLRVW
-2019-06-27 16:26:45,977 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:46,117 https://i.imgur.com:443 "GET /X39qMYI.jpg HTTP/1.1" 200 524837
-2019-06-27 16:26:46,150 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:46,150 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:46,381 File successfully downloaded
-2019-06-27 16:26:46,428 get_size gigs: '0.01'
-2019-06-27 16:26:46,428 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/gy65o4mk3oe01.png
-	ID: 7vr6ao
-	Title: Starman Wallpaper
-2019-06-27 16:26:46,434 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:46,438 https://api.imgur.com:443 "GET /3/image/sXNLRVW HTTP/1.1" 200 379
-2019-06-27 16:26:46,448 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:46,578 https://i.redd.it:443 "GET /gy65o4mk3oe01.png HTTP/1.1" 200 5538439
-2019-06-27 16:26:46,598 https://i.imgur.com:443 "GET /sXNLRVW.jpg HTTP/1.1" 200 480160
-2019-06-27 16:26:46,864 File successfully downloaded
-2019-06-27 16:26:47,001 get_size gigs: '0.01'
-2019-06-27 16:26:47,001 
-SUBMISSION INFO
-	Initial URL: http://orig10.deviantart.net/48c0/f/2016/204/4/b/retrowave_80_s_bg_by_rafael_de_jongh-d9wsq5j.png
-	ID: 5pouxc
-	Title: Retrowave
-2019-06-27 16:26:47,020 Starting new HTTP connection (1): orig10.deviantart.net:80
-2019-06-27 16:26:47,384 https://api.imgur.com:443 "GET /3/image/z99lTdC HTTP/1.1" 200 375
-2019-06-27 16:26:47,400 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:47,801 http://orig10.deviantart.net:80 "GET /48c0/f/2016/204/4/b/retrowave_80_s_bg_by_rafael_de_jongh-d9wsq5j.png HTTP/1.1" 200 8315784
-2019-06-27 16:26:47,840 File successfully downloaded
-2019-06-27 16:26:47,849 https://i.imgur.com:443 "GET /z99lTdC.jpg HTTP/1.1" 200 948934
-2019-06-27 16:26:47,916 get_size gigs: '0.01'
-2019-06-27 16:26:47,918 
-SUBMISSION INFO
-	Initial URL: https://i.imgur.com/CUGGaiZ.jpg
-	ID: 4zyq5x
-	Title: Rest in Spaghetti, never forgetti
-2019-06-27 16:26:47,920 Imgur ID: CUGGaiZ
-2019-06-27 16:26:47,929 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:48,167 File successfully downloaded
-2019-06-27 16:26:48,222 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:48,233 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:48,252 get_size gigs: '0.01'
-2019-06-27 16:26:48,252 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:20 Domain: "imgur.com/" Album: "None" ID: "sXNLRVW" ext: ".jpg" bs: ""
+16:59:20 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:20 https://i.imgur.com:443 "GET /ezOgN0q.jpg HTTP/1.1" 200 505899
+16:59:21 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:21 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:21 File successfully downloaded
+16:59:21 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:21 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/X39qMYI.jpg
+	ID: 38fhwr
+	Title: Autism Leaves
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:21 Domain: "imgur.com/" Album: "None" ID: "X39qMYI" ext: ".jpg" bs: ""
+16:59:21 https://api.imgur.com:443 "GET /3/image/sXNLRVW HTTP/1.1" 200 376
+16:59:21 Imgur link: https://i.imgur.com/sXNLRVW.jpg
+16:59:21 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:21 https://i.imgur.com:443 "GET /z99lTdC.jpg HTTP/1.1" 200 948934
+16:59:21 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:21 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:22 https://api.imgur.com:443 "GET /3/image/X39qMYI HTTP/1.1" 200 381
+16:59:22 Imgur link: https://i.imgur.com/X39qMYI.jpg
+16:59:22 File successfully downloaded
+16:59:22 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:22 
+SUBMISSION INFO THREAD 2
 	Initial URL: https://i.reddituploads.com/fb4fddb200f341068e9d689111e8db9b?fit=max&h=1536&w=1536&s=9e130457bc336a05ca424cb44b932d3d
 	ID: 5ax7dl
 	Title: 5 cm per second
-2019-06-27 16:26:48,338 get_size gigs: '0.01'
-2019-06-27 16:26:48,340 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:22 https://i.imgur.com:443 "GET /sXNLRVW.jpg HTTP/1.1" 200 480160
+16:59:23 File successfully downloaded
+16:59:23 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:23 
+SUBMISSION INFO THREAD 1
+	Initial URL: http://orig10.deviantart.net/48c0/f/2016/204/4/b/retrowave_80_s_bg_by_rafael_de_jongh-d9wsq5j.png
+	ID: 5pouxc
+	Title: Retrowave
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:23 https://i.imgur.com:443 "GET /X39qMYI.jpg HTTP/1.1" 200 524837
+16:59:23 File successfully downloaded
+16:59:23 Lock acquired to download file
+16:59:23 Starting new HTTPS connection (1): i.reddituploads.com:443
+16:59:23 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.redd.it/gy65o4mk3oe01.png
+	ID: 7vr6ao
+	Title: Starman Wallpaper
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:24 https://i.reddituploads.com:443 "GET /fb4fddb200f341068e9d689111e8db9b?fit=max&h=1536&w=1536&s=9e130457bc336a05ca424cb44b932d3d HTTP/1.1" 200 1246035
+16:59:25 File successfully downloaded
+16:59:25 Lock released
+16:59:25 Lock acquired to download file
+16:59:25 Starting new HTTP connection (1): orig10.deviantart.net:80
+16:59:25 
+SUBMISSION INFO THREAD 2
 	Initial URL: http://imgur.com/zF9RyA3
 	ID: 7g2zqh
 	Title: Burnin' Rose
-2019-06-27 16:26:48,340 Imgur ID: zF9RyA3
-2019-06-27 16:26:48,354 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:48,456 https://api.imgur.com:443 "GET /3/image/CUGGaiZ HTTP/1.1" 200 384
-2019-06-27 16:26:48,471 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:48,534 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:48,550 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:48,649 https://i.imgur.com:443 "GET /CUGGaiZ.jpg HTTP/1.1" 200 308249
-2019-06-27 16:26:48,782 https://api.imgur.com:443 "GET /3/image/zF9RyA3 HTTP/1.1" 200 379
-2019-06-27 16:26:48,795 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:48,862 File successfully downloaded
-2019-06-27 16:26:48,945 get_size gigs: '0.01'
-2019-06-27 16:26:48,945 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/n1ci0trfgrey.jpg
-	ID: 5sxyo3
-	Title: My friend asked why I was staring at my desktop He just doesn't realise
-2019-06-27 16:26:48,951 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:49,006 https://i.imgur.com:443 "GET /zF9RyA3.jpg HTTP/1.1" 200 2094063
-2019-06-27 16:26:49,417 https://i.redd.it:443 "GET /n1ci0trfgrey.jpg HTTP/1.1" 200 1018299
-2019-06-27 16:26:49,967 File successfully downloaded
-2019-06-27 16:26:50,245 get_size gigs: '0.02'
-2019-06-27 16:26:50,247 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/8kd8jy4vnem01.png
-	ID: 857hk9
-	Title: So this dropped yesterday, and I loved this frame
-2019-06-27 16:26:50,253 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:50,617 https://i.redd.it:443 "GET /8kd8jy4vnem01.png HTTP/1.1" 200 1825441
-2019-06-27 16:26:50,817 File successfully downloaded
-2019-06-27 16:26:50,897 get_size gigs: '0.02'
-2019-06-27 16:26:50,897 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:25 Domain: "imgur.com/" Album: "None" ID: "zF9RyA3" ext: "None" bs: ""
+16:59:25 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:25 http://orig10.deviantart.net:80 "GET /48c0/f/2016/204/4/b/retrowave_80_s_bg_by_rafael_de_jongh-d9wsq5j.png HTTP/1.1" 200 8315784
+16:59:25 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:25 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:25 https://api.imgur.com:443 "GET /3/image/zF9RyA3 HTTP/1.1" 200 378
+16:59:25 Imgur link: https://i.imgur.com/zF9RyA3.jpg
+16:59:27 File successfully downloaded
+16:59:27 Lock released
+16:59:27 Lock acquired to download file
+16:59:27 Starting new HTTPS connection (1): i.redd.it:443
+16:59:27 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://imgur.com/m4Qw8yB
 	ID: 7jgz8q
 	Title: Back to the Future
-2019-06-27 16:26:50,898 Imgur ID: m4Qw8yB
-2019-06-27 16:26:50,911 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:51,117 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:51,117 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:51,317 https://api.imgur.com:443 "GET /3/image/m4Qw8yB HTTP/1.1" 200 385
-2019-06-27 16:26:51,334 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:51,436 File successfully downloaded
-2019-06-27 16:26:51,486 https://i.imgur.com:443 "GET /m4Qw8yB.jpg HTTP/1.1" 200 193521
-2019-06-27 16:26:51,515 get_size gigs: '0.02'
-2019-06-27 16:26:51,516 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:27 Domain: "imgur.com/" Album: "None" ID: "m4Qw8yB" ext: "None" bs: ""
+16:59:27 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:27 https://i.redd.it:443 "GET /gy65o4mk3oe01.png HTTP/1.1" 200 5538439
+16:59:27 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:27 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:27 https://api.imgur.com:443 "GET /3/image/m4Qw8yB HTTP/1.1" 200 376
+16:59:27 Imgur link: https://i.imgur.com/m4Qw8yB.jpg
+16:59:28 File successfully downloaded
+16:59:28 Lock released
+16:59:28 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:28 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.imgur.com/CUGGaiZ.jpg
+	ID: 4zyq5x
+	Title: Rest in Spaghetti, never forgetti
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:28 Domain: "imgur.com/" Album: "None" ID: "CUGGaiZ" ext: ".jpg" bs: ""
+16:59:28 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:28 https://i.imgur.com:443 "GET /zF9RyA3.jpg HTTP/1.1" 200 2094063
+16:59:29 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:29 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:29 https://api.imgur.com:443 "GET /3/image/CUGGaiZ HTTP/1.1" 200 383
+16:59:29 Imgur link: https://i.imgur.com/CUGGaiZ.jpg
+16:59:29 File successfully downloaded
+16:59:29 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:29 
+SUBMISSION INFO THREAD 2
 	Initial URL: http://i.imgur.com/bRe7A5b.png
 	ID: 26h5j9
 	Title: 2D low poly bird on a branch
-2019-06-27 16:26:51,516 Imgur ID: bRe7A5b
-2019-06-27 16:26:51,528 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:51,601 File successfully downloaded
-2019-06-27 16:26:51,684 get_size gigs: '0.03'
-2019-06-27 16:26:51,684 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:29 Domain: "imgur.com/" Album: "None" ID: "bRe7A5b" ext: ".png" bs: ""
+16:59:29 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:29 https://i.imgur.com:443 "GET /m4Qw8yB.jpg HTTP/1.1" 200 193521
+16:59:29 File successfully downloaded
+16:59:29 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:29 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:29 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:30 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/bdy5q6obfy4y.png
 	ID: 5jl4kr
 	Title: The entire Bee Movie script except it's a wallpaper 1920x1080OC
-2019-06-27 16:26:51,699 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:51,762 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:51,780 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:51,867 https://i.redd.it:443 "GET /bdy5q6obfy4y.png HTTP/1.1" 200 1217489
-2019-06-27 16:26:52,267 File successfully downloaded
-2019-06-27 16:26:52,334 get_size gigs: '0.03'
-2019-06-27 16:26:52,334 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:30 https://i.imgur.com:443 "GET /CUGGaiZ.jpg HTTP/1.1" 200 308249
+16:59:30 File successfully downloaded
+16:59:30 Lock acquired to download file
+16:59:30 Starting new HTTPS connection (1): i.redd.it:443
+16:59:30 https://api.imgur.com:443 "GET /3/image/bRe7A5b HTTP/1.1" 200 506
+16:59:30 Imgur link: https://i.imgur.com/bRe7A5b.png
+16:59:30 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.redd.it/n1ci0trfgrey.jpg
+	ID: 5sxyo3
+	Title: My friend asked why I was staring at my desktop He just doesn't realise
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:30 https://i.redd.it:443 "GET /bdy5q6obfy4y.png HTTP/1.1" 200 1217489
+16:59:31 File successfully downloaded
+16:59:31 Lock released
+16:59:31 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:31 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/owf4fzify7by.jpg
 	ID: 5pfwih
 	Title: Duck bath from Spirited Away 3555 x 1920
-2019-06-27 16:26:52,343 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:52,355 File successfully downloaded
-2019-06-27 16:26:52,360 https://api.imgur.com:443 "GET /3/image/bRe7A5b HTTP/1.1" 200 506
-2019-06-27 16:26:52,371 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:52,417 get_size gigs: '0.03'
-2019-06-27 16:26:52,417 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/Fx6BGlt.jpg
-	ID: 3kxrj2
-	Title: Husky walks across a frozen lake after rain
-2019-06-27 16:26:52,417 Imgur ID: Fx6BGlt
-2019-06-27 16:26:52,417 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:52,515 https://i.redd.it:443 "GET /owf4fzify7by.jpg HTTP/1.1" 200 445415
-2019-06-27 16:26:52,550 https://i.imgur.com:443 "GET /bRe7A5b.png HTTP/1.1" 200 2656475
-2019-06-27 16:26:52,611 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:52,629 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:52,717 File successfully downloaded
-2019-06-27 16:26:52,880 get_size gigs: '0.03'
-2019-06-27 16:26:52,880 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/gb5no2lt9t8z.jpg
-	ID: 6mgiq3
-	Title: Close up shot of lava 2560  1280
-2019-06-27 16:26:52,895 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:53,044 https://api.imgur.com:443 "GET /3/image/Fx6BGlt HTTP/1.1" 200 381
-2019-06-27 16:26:53,051 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:53,240 https://i.redd.it:443 "GET /gb5no2lt9t8z.jpg HTTP/1.1" 200 681728
-2019-06-27 16:26:53,277 https://i.imgur.com:443 "GET /Fx6BGlt.jpg HTTP/1.1" 200 364199
-2019-06-27 16:26:53,288 File successfully downloaded
-2019-06-27 16:26:53,467 get_size gigs: '0.03'
-2019-06-27 16:26:53,467 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:31 https://i.imgur.com:443 "GET /bRe7A5b.png HTTP/1.1" 200 2656475
+16:59:33 File successfully downloaded
+16:59:33 Lock acquired to download file
+16:59:33 Starting new HTTPS connection (1): i.redd.it:443
+16:59:34 
+SUBMISSION INFO THREAD 2
 	Initial URL: http://i.imgur.com/X7lsZet.jpg
 	ID: 1y1b84
 	Title: Two sides of the battle
-2019-06-27 16:26:53,467 Imgur ID: X7lsZet
-2019-06-27 16:26:53,467 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:53,512 File successfully downloaded
-2019-06-27 16:26:53,538 File successfully downloaded
-2019-06-27 16:26:53,600 get_size gigs: '0.03'
-2019-06-27 16:26:53,600 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/OUe6WiC.jpg
-	ID: 3b9zbn
-	Title: I made a bigger version 2560x1440
-2019-06-27 16:26:53,600 Imgur ID: OUe6WiC
-2019-06-27 16:26:53,616 get_size gigs: '0.03'
-2019-06-27 16:26:53,617 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:53,617 
-SUBMISSION INFO
-	Initial URL: http://imgur.com/bMBDLL4
-	ID: 4sgbqw
-	Title: My newest attempt at a minimalist wallpaper
-2019-06-27 16:26:53,618 Imgur ID: bMBDLL4
-2019-06-27 16:26:53,632 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:53,767 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:53,767 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:53,810 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:53,817 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:53,901 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:53,901 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:53,979 https://api.imgur.com:443 "GET /3/image/X7lsZet HTTP/1.1" 200 372
-2019-06-27 16:26:53,984 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:54,000 https://api.imgur.com:443 "GET /3/image/OUe6WiC HTTP/1.1" 200 389
-2019-06-27 16:26:54,012 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:54,104 https://api.imgur.com:443 "GET /3/image/bMBDLL4 HTTP/1.1" 200 385
-2019-06-27 16:26:54,113 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:54,141 https://i.imgur.com:443 "GET /X7lsZet.jpg HTTP/1.1" 200 473201
-2019-06-27 16:26:54,170 https://i.imgur.com:443 "GET /OUe6WiC.jpg HTTP/1.1" 200 151852
-2019-06-27 16:26:54,267 https://i.imgur.com:443 "GET /bMBDLL4.jpg HTTP/1.1" 200 443930
-2019-06-27 16:26:54,284 File successfully downloaded
-2019-06-27 16:26:54,354 File successfully downloaded
-2019-06-27 16:26:54,479 File successfully downloaded
-2019-06-27 16:26:54,484 get_size gigs: '0.03'
-2019-06-27 16:26:54,484 
-SUBMISSION INFO
-	Initial URL: https://i.imgur.com/trgCguX.jpg
-	ID: 7s095d
-	Title: Danny Trejo The man is 70, been in jail, 280 movies, and has two boxing belts 1240x827
-2019-06-27 16:26:54,484 Imgur ID: trgCguX
-2019-06-27 16:26:54,484 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:54,500 get_size gigs: '0.03'
-2019-06-27 16:26:54,500 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:34 Domain: "imgur.com/" Album: "None" ID: "X7lsZet" ext: ".jpg" bs: ""
+16:59:34 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:34 https://i.redd.it:443 "GET /n1ci0trfgrey.jpg HTTP/1.1" 200 1018299
+16:59:34 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:34 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:34 https://api.imgur.com:443 "GET /3/image/X7lsZet HTTP/1.1" 200 374
+16:59:34 Imgur link: https://i.imgur.com/X7lsZet.jpg
+16:59:34 File successfully downloaded
+16:59:34 Lock released
+16:59:34 Lock acquired to download file
+16:59:34 Starting new HTTPS connection (1): i.redd.it:443
+16:59:34 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.redd.it/8kd8jy4vnem01.png
+	ID: 857hk9
+	Title: So this dropped yesterday, and I loved this frame
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:34 https://i.redd.it:443 "GET /owf4fzify7by.jpg HTTP/1.1" 200 445415
+16:59:35 File successfully downloaded
+16:59:35 Lock released
+16:59:35 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:35 
+SUBMISSION INFO THREAD 1
+	Initial URL: https://i.redd.it/gb5no2lt9t8z.jpg
+	ID: 6mgiq3
+	Title: Close up shot of lava 2560  1280
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:35 https://i.imgur.com:443 "GET /X7lsZet.jpg HTTP/1.1" 200 473201
+16:59:36 File successfully downloaded
+16:59:36 Lock acquired to download file
+16:59:36 Starting new HTTPS connection (1): i.redd.it:443
+16:59:36 
+SUBMISSION INFO THREAD 2
 	Initial URL: http://i.imgur.com/wIMHicl.jpg
 	ID: 5aq1d2
 	Title: A bird's eye view of Coney Island 19201573
-2019-06-27 16:26:54,500 Imgur ID: wIMHicl
-2019-06-27 16:26:54,500 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:54,592 get_size gigs: '0.03'
-2019-06-27 16:26:54,593 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/wvunc.jpg
-	ID: 138qi2
-	Title: I have a script that randomizes wallpapers from this subreddit Which one of you did this
-2019-06-27 16:26:54,593 Imgur ID: wvunc
-2019-06-27 16:26:54,600 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:54,684 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:54,684 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:54,774 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:54,779 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:54,900 https://api.imgur.com:443 "GET /3/image/trgCguX HTTP/1.1" 200 387
-2019-06-27 16:26:54,917 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:54,966 https://api.imgur.com:443 "GET /3/image/wvunc HTTP/1.1" 200 370
-2019-06-27 16:26:54,974 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:55,051 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:55,051 https://i.imgur.com:443 "GET /trgCguX.jpg HTTP/1.1" 200 137643
-2019-06-27 16:26:55,066 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:55,145 https://i.imgur.com:443 "GET /wvunc.jpg HTTP/1.1" 200 340604
-2019-06-27 16:26:55,179 File successfully downloaded
-2019-06-27 16:26:55,284 get_size gigs: '0.03'
-2019-06-27 16:26:55,284 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/18WeFBs.jpg
-	ID: 5nq6jl
-	Title: Darth Vader Lightsaber Scene from Rogue One
-2019-06-27 16:26:55,284 Imgur ID: 18WeFBs
-2019-06-27 16:26:55,299 https://api.imgur.com:443 "GET /3/image/wIMHicl HTTP/1.1" 200 378
-2019-06-27 16:26:55,300 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:55,300 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:55,317 File successfully downloaded
-2019-06-27 16:26:55,417 get_size gigs: '0.03'
-2019-06-27 16:26:55,417 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/Ohq6H4p.jpg
-	ID: 338sjz
-	Title: Calvin  Hobbes explore the TiltShift Forrest
-2019-06-27 16:26:55,417 Imgur ID: Ohq6H4p
-2019-06-27 16:26:55,434 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:55,498 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:55,508 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:55,534 https://i.imgur.com:443 "GET /wIMHicl.jpg HTTP/1.1" 200 859524
-2019-06-27 16:26:55,717 https://api.imgur.com:443 "GET /3/image/18WeFBs HTTP/1.1" 200 379
-2019-06-27 16:26:55,734 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:55,893 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:55,900 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:55,904 https://i.imgur.com:443 "GET /18WeFBs.jpg HTTP/1.1" 200 116594
-2019-06-27 16:26:56,011 File successfully downloaded
-2019-06-27 16:26:56,074 get_size gigs: '0.03'
-2019-06-27 16:26:56,075 
-SUBMISSION INFO
-	Initial URL: http://imgur.com/a/rSZlZ
-	ID: 2zwj5y
-	Title: Damn, it feels good to be a gangster
-2019-06-27 16:26:56,075 Imgur ID: rSZlZ
-2019-06-27 16:26:56,080 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:56,360 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:56,376 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:56,500 https://api.imgur.com:443 "GET /3/image/Ohq6H4p HTTP/1.1" 200 384
-2019-06-27 16:26:56,517 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:56,617 File successfully downloaded
-2019-06-27 16:26:56,665 get_size gigs: '0.03'
-2019-06-27 16:26:56,665 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:36 Domain: "imgur.com/" Album: "None" ID: "wIMHicl" ext: ".jpg" bs: ""
+16:59:36 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:36 https://i.redd.it:443 "GET /8kd8jy4vnem01.png HTTP/1.1" 200 1825441
+16:59:36 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:36 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:36 https://api.imgur.com:443 "GET /3/image/wIMHicl HTTP/1.1" 200 374
+16:59:36 Imgur link: https://i.imgur.com/wIMHicl.jpg
+16:59:37 File successfully downloaded
+16:59:37 Lock released
+16:59:37 Lock acquired to download file
+16:59:37 Starting new HTTPS connection (1): i.redd.it:443
+16:59:37 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/Fx6BGlt.jpg
+	ID: 3kxrj2
+	Title: Husky walks across a frozen lake after rain
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:37 Domain: "imgur.com/" Album: "None" ID: "Fx6BGlt" ext: ".jpg" bs: ""
+16:59:37 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:38 https://i.redd.it:443 "GET /gb5no2lt9t8z.jpg HTTP/1.1" 200 681728
+16:59:38 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:38 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:38 https://api.imgur.com:443 "GET /3/image/Fx6BGlt HTTP/1.1" 200 381
+16:59:38 Imgur link: https://i.imgur.com/Fx6BGlt.jpg
+16:59:38 File successfully downloaded
+16:59:38 Lock released
+16:59:38 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:38 
+SUBMISSION INFO THREAD 1
+	Initial URL: http://imgur.com/bMBDLL4
+	ID: 4sgbqw
+	Title: My newest attempt at a minimalist wallpaper
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:38 Domain: "imgur.com/" Album: "None" ID: "bMBDLL4" ext: "None" bs: ""
+16:59:38 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:38 https://i.imgur.com:443 "GET /wIMHicl.jpg HTTP/1.1" 200 859524
+16:59:38 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:38 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:39 File successfully downloaded
+16:59:39 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:39 https://api.imgur.com:443 "GET /3/image/bMBDLL4 HTTP/1.1" 200 383
+16:59:39 Imgur link: https://i.imgur.com/bMBDLL4.jpg
+16:59:39 
+SUBMISSION INFO THREAD 2
 	Initial URL: https://i.redd.it/hleeb6fgtpj01.jpg
 	ID: 81wrie
 	Title: Planet Express 1920x1080
-2019-06-27 16:26:56,684 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:56,684 https://i.imgur.com:443 "GET /Ohq6H4p.jpg HTTP/1.1" 200 336122
-2019-06-27 16:26:56,739 https://api.imgur.com:443 "GET /3/album/rSZlZ/images HTTP/1.1" 200 662
-2019-06-27 16:26:56,742 Downloading imgur album
-2019-06-27 16:26:56,748 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:56,844 https://i.redd.it:443 "GET /hleeb6fgtpj01.jpg HTTP/1.1" 200 915163
-2019-06-27 16:26:56,888 File successfully downloaded
-2019-06-27 16:26:56,964 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:56,972 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:56,984 get_size gigs: '0.03'
-2019-06-27 16:26:56,984 
-SUBMISSION INFO
-	Initial URL: https://i.imgur.com/XBkMx5B.jpg
-	ID: 90g7j7
-	Title: Samurai Jack 19201080
-2019-06-27 16:26:56,984 Imgur ID: XBkMx5B
-2019-06-27 16:26:57,000 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:57,134 File successfully downloaded
-2019-06-27 16:26:57,210 https://i.imgur.com:443 "GET /NVQ1nuu.png HTTP/1.1" 200 465378
-2019-06-27 16:26:57,210 get_size gigs: '0.03'
-2019-06-27 16:26:57,215 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:39 https://i.imgur.com:443 "GET /Fx6BGlt.jpg HTTP/1.1" 200 364199
+16:59:39 File successfully downloaded
+16:59:39 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:39 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/OUe6WiC.jpg
+	ID: 3b9zbn
+	Title: I made a bigger version 2560x1440
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:39 Domain: "imgur.com/" Album: "None" ID: "OUe6WiC" ext: ".jpg" bs: ""
+16:59:39 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:39 https://i.imgur.com:443 "GET /bMBDLL4.jpg HTTP/1.1" 200 443930
+16:59:39 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:39 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:39 File successfully downloaded
+16:59:39 Lock acquired to download file
+16:59:39 Starting new HTTPS connection (1): i.redd.it:443
+16:59:39 
+SUBMISSION INFO THREAD 1
+	Initial URL: http://i.imgur.com/wvunc.jpg
+	ID: 138qi2
+	Title: I have a script that randomizes wallpapers from this subreddit Which one of you did this
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:39 Domain: "imgur.com/" Album: "None" ID: "wvunc" ext: ".jpg" bs: ""
+16:59:39 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:39 https://api.imgur.com:443 "GET /3/image/OUe6WiC HTTP/1.1" 200 387
+16:59:39 Imgur link: https://i.imgur.com/OUe6WiC.jpg
+16:59:40 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:40 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:40 https://i.redd.it:443 "GET /hleeb6fgtpj01.jpg HTTP/1.1" 200 915163
+16:59:40 https://api.imgur.com:443 "GET /3/image/wvunc HTTP/1.1" 200 371
+16:59:40 Imgur link: https://i.imgur.com/wvunc.jpg
+16:59:40 File successfully downloaded
+16:59:40 Lock released
+16:59:40 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:40 
+SUBMISSION INFO THREAD 2
 	Initial URL: https://i.imgur.com/wHBNl9i.jpg
 	ID: 76bwib
 	Title: Star Wars Hidden Sanctuary
-2019-06-27 16:26:57,216 Imgur ID: wHBNl9i
-2019-06-27 16:26:57,221 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:57,231 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:57,240 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:57,450 https://api.imgur.com:443 "GET /3/image/XBkMx5B HTTP/1.1" 200 382
-2019-06-27 16:26:57,467 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:57,516 File successfully downloaded
-2019-06-27 16:26:57,517 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:57,645 https://i.imgur.com:443 "GET /XBkMx5B.jpg HTTP/1.1" 200 171785
-2019-06-27 16:26:57,734 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:57,734 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:57,750 File successfully downloaded
-2019-06-27 16:26:57,822 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:57,834 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:57,834 get_size gigs: '0.03'
-2019-06-27 16:26:57,834 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/7ru2j9ndmfdy.jpg
-	ID: 5rmaly
-	Title: I made something, how do you like it guys
-2019-06-27 16:26:57,834 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:57,905 https://i.imgur.com:443 "GET /rDQ6BEA.jpg HTTP/1.1" 200 64640
-2019-06-27 16:26:57,981 File successfully downloaded
-2019-06-27 16:26:57,987 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:58,043 https://i.redd.it:443 "GET /7ru2j9ndmfdy.jpg HTTP/1.1" 200 1296568
-2019-06-27 16:26:58,060 https://api.imgur.com:443 "GET /3/image/wHBNl9i HTTP/1.1" 200 375
-2019-06-27 16:26:58,068 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:58,173 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:58,182 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:58,233 https://i.imgur.com:443 "GET /wHBNl9i.jpg HTTP/1.1" 200 399353
-2019-06-27 16:26:58,330 https://i.imgur.com:443 "GET /gIMtb0Z.png HTTP/1.1" 200 192261
-2019-06-27 16:26:58,441 File successfully downloaded
-2019-06-27 16:26:58,485 File successfully downloaded
-2019-06-27 16:26:58,485 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:58,557 get_size gigs: '0.03'
-2019-06-27 16:26:58,561 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:40 Domain: "imgur.com/" Album: "None" ID: "wHBNl9i" ext: ".jpg" bs: ""
+16:59:40 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:40 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:40 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:41 https://i.imgur.com:443 "GET /OUe6WiC.jpg HTTP/1.1" 200 151852
+16:59:41 https://api.imgur.com:443 "GET /3/image/wHBNl9i HTTP/1.1" 200 376
+16:59:41 Imgur link: https://i.imgur.com/wHBNl9i.jpg
+16:59:41 File successfully downloaded
+16:59:41 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:41 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.imgur.com/trgCguX.jpg
+	ID: 7s095d
+	Title: Danny Trejo The man is 70, been in jail, 280 movies, and has two boxing belts 1240x827
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:41 Domain: "imgur.com/" Album: "None" ID: "trgCguX" ext: ".jpg" bs: ""
+16:59:41 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:41 https://i.imgur.com:443 "GET /wvunc.jpg HTTP/1.1" 200 340604
+16:59:41 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:41 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:41 File successfully downloaded
+16:59:41 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:41 
+SUBMISSION INFO THREAD 1
+	Initial URL: http://i.imgur.com/Ohq6H4p.jpg
+	ID: 338sjz
+	Title: Calvin  Hobbes explore the TiltShift Forrest
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:41 Domain: "imgur.com/" Album: "None" ID: "Ohq6H4p" ext: ".jpg" bs: ""
+16:59:41 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:41 https://api.imgur.com:443 "GET /3/image/trgCguX HTTP/1.1" 200 388
+16:59:41 Imgur link: https://i.imgur.com/trgCguX.jpg
+16:59:41 https://i.imgur.com:443 "GET /wHBNl9i.jpg HTTP/1.1" 200 399353
+16:59:41 File successfully downloaded
+16:59:41 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:42 
+SUBMISSION INFO THREAD 2
 	Initial URL: https://i.redd.it/tboesrruypyz.jpg
 	ID: 7dsdra
 	Title: Déjà vu
-2019-06-27 16:26:58,570 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:58,701 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:58,709 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:58,734 https://i.redd.it:443 "GET /tboesrruypyz.jpg HTTP/1.1" 200 176199
-2019-06-27 16:26:58,877 https://i.imgur.com:443 "GET /GeZmbJA.png HTTP/1.1" 200 324671
-2019-06-27 16:26:58,877 File successfully downloaded
-2019-06-27 16:26:59,022 get_size gigs: '0.03'
-2019-06-27 16:26:59,026 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:42 https://i.imgur.com:443 "GET /trgCguX.jpg HTTP/1.1" 200 137643
+16:59:42 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:42 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:42 File successfully downloaded
+16:59:42 Lock acquired to download file
+16:59:42 Starting new HTTPS connection (1): i.redd.it:443
+16:59:42 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/18WeFBs.jpg
+	ID: 5nq6jl
+	Title: Darth Vader Lightsaber Scene from Rogue One
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:42 Domain: "imgur.com/" Album: "None" ID: "18WeFBs" ext: ".jpg" bs: ""
+16:59:42 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:42 https://api.imgur.com:443 "GET /3/image/Ohq6H4p HTTP/1.1" 200 383
+16:59:42 Imgur link: https://i.imgur.com/Ohq6H4p.jpg
+16:59:42 https://i.redd.it:443 "GET /tboesrruypyz.jpg HTTP/1.1" 200 176199
+16:59:42 File successfully downloaded
+16:59:42 Lock released
+16:59:42 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:42 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:42 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:42 
+SUBMISSION INFO THREAD 2
 	Initial URL: https://i.redd.it/llud0j7a7ch21.jpg
 	ID: arxqwe
 	Title: homer simpson
-2019-06-27 16:26:59,030 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:59,097 File successfully downloaded
-2019-06-27 16:26:59,103 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:59,216 https://i.redd.it:443 "GET /llud0j7a7ch21.jpg HTTP/1.1" 200 630800
-2019-06-27 16:26:59,308 File successfully downloaded
-2019-06-27 16:26:59,383 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:59,399 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:59,467 File successfully downloaded
-2019-06-27 16:26:59,484 get_size gigs: '0.04'
-2019-06-27 16:26:59,484 
-SUBMISSION INFO
-	Initial URL: http://imgur.com/a/OYCju
-	ID: 3okwcu
-	Title: I edited the top 25 images from ralternativeart to be wallpaper size 1920x1080
-2019-06-27 16:26:59,484 Imgur ID: OYCju
-2019-06-27 16:26:59,484 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:59,567 https://i.imgur.com:443 "GET /AGWHnX0.jpg HTTP/1.1" 200 148099
-2019-06-27 16:26:59,590 get_size gigs: '0.04'
-2019-06-27 16:26:59,590 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:42 https://i.imgur.com:443 "GET /Ohq6H4p.jpg HTTP/1.1" 200 336122
+16:59:42 https://api.imgur.com:443 "GET /3/image/18WeFBs HTTP/1.1" 200 379
+16:59:42 Imgur link: https://i.imgur.com/18WeFBs.jpg
+16:59:42 File successfully downloaded
+16:59:42 Lock acquired to download file
+16:59:42 Starting new HTTPS connection (1): i.redd.it:443
+16:59:43 
+SUBMISSION INFO THREAD 1
+	Initial URL: https://i.imgur.com/XBkMx5B.jpg
+	ID: 90g7j7
+	Title: Samurai Jack 19201080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:43 Domain: "imgur.com/" Album: "None" ID: "XBkMx5B" ext: ".jpg" bs: ""
+16:59:43 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:43 https://i.redd.it:443 "GET /llud0j7a7ch21.jpg HTTP/1.1" 200 630800
+16:59:43 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:43 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:43 File successfully downloaded
+16:59:43 Lock released
+16:59:43 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:43 
+SUBMISSION INFO THREAD 2
 	Initial URL: https://i.redd.it/e8ssljkntvmy.png
 	ID: 60sgua
 	Title: Kurzgesagt Style Wallpaper 1920x1080
-2019-06-27 16:26:59,600 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:26:59,659 File successfully downloaded
-2019-06-27 16:26:59,663 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:59,689 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:59,702 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:26:59,759 https://i.redd.it:443 "GET /e8ssljkntvmy.png HTTP/1.1" 200 700705
-2019-06-27 16:26:59,851 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:26:59,867 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:26:59,917 https://api.imgur.com:443 "GET /3/album/OYCju/images HTTP/1.1" 200 1854
-2019-06-27 16:26:59,923 Downloading imgur album
-2019-06-27 16:26:59,928 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:00,033 File successfully downloaded
-2019-06-27 16:27:00,111 get_size gigs: '0.04'
-2019-06-27 16:27:00,112 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:43 https://i.imgur.com:443 "GET /18WeFBs.jpg HTTP/1.1" 200 116594
+16:59:43 File successfully downloaded
+16:59:43 Lock acquired to download file
+16:59:43 Starting new HTTPS connection (1): i.redd.it:443
+16:59:43 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://imgur.com/a/rSZlZ
+	ID: 2zwj5y
+	Title: Damn, it feels good to be a gangster
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:43 Domain: "imgur.com/" Album: "a/" ID: "rSZlZ" ext: "None" bs: ""
+16:59:43 https://api.imgur.com:443 "GET /3/image/XBkMx5B HTTP/1.1" 200 383
+16:59:43 Imgur link: https://i.imgur.com/XBkMx5B.jpg
+16:59:44 https://i.redd.it:443 "GET /e8ssljkntvmy.png HTTP/1.1" 200 700705
+16:59:44 File successfully downloaded
+16:59:44 Lock released
+16:59:44 Locked threads for imgur album
+16:59:44 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:44 
+SUBMISSION INFO THREAD 2
 	Initial URL: http://i.imgur.com/307lCz7.jpg
 	ID: 3bejak
 	Title: Tilt shift of Machu Picchu
-2019-06-27 16:27:00,112 Imgur ID: 307lCz7
-2019-06-27 16:27:00,118 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:00,313 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:00,319 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:00,345 https://i.imgur.com:443 "GET /yt86fMB.jpg HTTP/1.1" 200 198933
-2019-06-27 16:27:00,401 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:00,417 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:00,529 https://api.imgur.com:443 "GET /3/image/307lCz7 HTTP/1.1" 200 373
-2019-06-27 16:27:00,534 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:00,567 https://i.imgur.com:443 "GET /GdgafbZ.jpg HTTP/1.1" 200 228995
-2019-06-27 16:27:00,753 File successfully downloaded
-2019-06-27 16:27:00,763 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:00,767 File successfully downloaded
-2019-06-27 16:27:00,767 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:00,934 https://i.imgur.com:443 "GET /307lCz7.jpg HTTP/1.1" 200 358033
-2019-06-27 16:27:00,934 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:00,951 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:00,970 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:00,982 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:01,117 https://i.imgur.com:443 "GET /29gaYRn.jpg HTTP/1.1" 200 182494
-2019-06-27 16:27:01,142 https://i.imgur.com:443 "GET /cG9eXMk.jpg HTTP/1.1" 200 133261
-2019-06-27 16:27:01,269 File successfully downloaded
-2019-06-27 16:27:01,275 File successfully downloaded
-2019-06-27 16:27:01,276 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:01,282 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:01,530 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:01,532 File successfully downloaded
-2019-06-27 16:27:01,539 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:01,542 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:01,551 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:01,632 get_size gigs: '0.04'
-2019-06-27 16:27:01,633 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/E2zAjfw.jpg
-	ID: 21qmdz
-	Title: Lord of The Rings Found today on rlotr
-2019-06-27 16:27:01,633 Imgur ID: E2zAjfw
-2019-06-27 16:27:01,638 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:01,713 https://i.imgur.com:443 "GET /4gdcscj.jpg HTTP/1.1" 200 271057
-2019-06-27 16:27:01,717 https://i.imgur.com:443 "GET /M3sOlMg.jpg HTTP/1.1" 200 167631
-2019-06-27 16:27:01,854 File successfully downloaded
-2019-06-27 16:27:01,861 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:01,867 File successfully downloaded
-2019-06-27 16:27:01,884 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:01,903 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:01,912 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:02,071 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:02,079 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:02,083 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:02,088 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:02,117 https://api.imgur.com:443 "GET /3/image/E2zAjfw HTTP/1.1" 200 368
-2019-06-27 16:27:02,117 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:02,217 https://i.imgur.com:443 "GET /uA1NSv3.png HTTP/1.1" 200 323434
-2019-06-27 16:27:02,234 https://i.imgur.com:443 "GET /H1vmUjr.jpg HTTP/1.1" 200 185645
-2019-06-27 16:27:02,277 https://i.imgur.com:443 "GET /E2zAjfw.jpg HTTP/1.1" 200 806891
-2019-06-27 16:27:02,387 File successfully downloaded
-2019-06-27 16:27:02,405 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:02,423 File successfully downloaded
-2019-06-27 16:27:02,426 
-Finished imgur album
-2019-06-27 16:27:02,559 File successfully downloaded
-2019-06-27 16:27:02,609 get_size gigs: '0.04'
-2019-06-27 16:27:02,610 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:44 Domain: "imgur.com/" Album: "None" ID: "307lCz7" ext: ".jpg" bs: ""
+16:59:44 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:44 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:44 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:44 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:44 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:44 https://api.imgur.com:443 "GET /3/image/307lCz7 HTTP/1.1" 200 371
+16:59:44 Imgur link: https://i.imgur.com/307lCz7.jpg
+16:59:44 https://api.imgur.com:443 "GET /3/album/rSZlZ/images HTTP/1.1" 200 663
+16:59:44 Downloading imgur album
+16:59:44 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:45 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:45 Imgur link: https://i.imgur.com/NVQ1nuu.png
+16:59:45 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:45 https://i.imgur.com:443 "GET /NVQ1nuu.png HTTP/1.1" 200 465378
+16:59:45 Imgur File successfully downloaded
+16:59:45 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:45 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:45 Imgur link: https://i.imgur.com/rDQ6BEA.jpg
+16:59:45 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:46 https://i.imgur.com:443 "GET /rDQ6BEA.jpg HTTP/1.1" 200 64640
+16:59:46 Imgur File successfully downloaded
+16:59:46 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:46 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:46 Imgur link: https://i.imgur.com/gIMtb0Z.png
+16:59:46 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:46 https://i.imgur.com:443 "GET /gIMtb0Z.png HTTP/1.1" 200 192261
+16:59:46 Imgur File successfully downloaded
+16:59:46 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:47 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:47 Imgur link: https://i.imgur.com/GeZmbJA.png
+16:59:47 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:47 https://i.imgur.com:443 "GET /GeZmbJA.png HTTP/1.1" 200 324671
+16:59:47 Imgur File successfully downloaded
+16:59:47 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:47 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:47 Imgur link: https://i.imgur.com/AGWHnX0.jpg
+16:59:47 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:48 https://i.imgur.com:443 "GET /AGWHnX0.jpg HTTP/1.1" 200 148099
+16:59:48 Imgur File successfully downloaded
+16:59:48 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:48 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:48 Imgur link: https://i.imgur.com/yt86fMB.jpg
+16:59:48 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:48 https://i.imgur.com:443 "GET /yt86fMB.jpg HTTP/1.1" 200 198933
+16:59:48 Imgur File successfully downloaded
+16:59:48 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:48 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:48 Imgur link: https://i.imgur.com/cG9eXMk.jpg
+16:59:48 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:49 https://i.imgur.com:443 "GET /cG9eXMk.jpg HTTP/1.1" 200 133261
+16:59:49 Imgur File successfully downloaded
+16:59:49 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:49 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:49 Imgur link: https://i.imgur.com/4gdcscj.jpg
+16:59:49 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:49 https://i.imgur.com:443 "GET /4gdcscj.jpg HTTP/1.1" 200 271057
+16:59:50 Imgur File successfully downloaded
+16:59:50 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:50 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:50 Imgur link: https://i.imgur.com/uA1NSv3.png
+16:59:50 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:50 https://i.imgur.com:443 "GET /uA1NSv3.png HTTP/1.1" 200 323434
+16:59:50 Imgur File successfully downloaded
+16:59:50 Finished imgur album
+16:59:50 Released lock after imgur album
+16:59:50 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:51 
+SUBMISSION INFO THREAD 0
 	Initial URL: http://imgur.com/Lva7YQS
 	ID: 57sxwp
 	Title: This wallpaper always makes me smile Jurassic Park Toy Story
-2019-06-27 16:27:02,610 Imgur ID: Lva7YQS
-2019-06-27 16:27:02,616 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:02,652 get_size gigs: '0.04'
-2019-06-27 16:27:02,653 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/bGzjG8g.jpg
-	ID: 2190q3
-	Title: My very subtle Godzilla Wallpaper 1920x1080
-2019-06-27 16:27:02,654 Imgur ID: bGzjG8g
-2019-06-27 16:27:02,659 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:02,717 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:02,727 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:02,797 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:02,806 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:02,834 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:02,845 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:02,881 https://i.imgur.com:443 "GET /xRz4OZJ.jpg HTTP/1.1" 200 286766
-2019-06-27 16:27:03,014 https://api.imgur.com:443 "GET /3/image/Lva7YQS HTTP/1.1" 200 383
-2019-06-27 16:27:03,022 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:03,043 File successfully downloaded
-2019-06-27 16:27:03,049 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:03,069 https://api.imgur.com:443 "GET /3/image/bGzjG8g HTTP/1.1" 200 377
-2019-06-27 16:27:03,078 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:03,195 https://i.imgur.com:443 "GET /Lva7YQS.jpg HTTP/1.1" 200 234080
-2019-06-27 16:27:03,217 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:03,217 https://i.imgur.com:443 "GET /bGzjG8g.jpg HTTP/1.1" 200 397673
-2019-06-27 16:27:03,234 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:03,339 File successfully downloaded
-2019-06-27 16:27:03,405 https://i.imgur.com:443 "GET /FSjKokw.jpg HTTP/1.1" 200 262433
-2019-06-27 16:27:03,439 File successfully downloaded
-2019-06-27 16:27:03,500 get_size gigs: '0.04'
-2019-06-27 16:27:03,502 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:51 Domain: "imgur.com/" Album: "None" ID: "Lva7YQS" ext: "None" bs: ""
+16:59:51 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:51 https://i.imgur.com:443 "GET /XBkMx5B.jpg HTTP/1.1" 200 171785
+16:59:51 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:51 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:51 File successfully downloaded
+16:59:51 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:51 
+SUBMISSION INFO THREAD 1
+	Initial URL: https://i.redd.it/7ru2j9ndmfdy.jpg
+	ID: 5rmaly
+	Title: I made something, how do you like it guys
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:51 https://api.imgur.com:443 "GET /3/image/Lva7YQS HTTP/1.1" 200 382
+16:59:51 Imgur link: https://i.imgur.com/Lva7YQS.jpg
+16:59:51 https://i.imgur.com:443 "GET /307lCz7.jpg HTTP/1.1" 200 358033
+16:59:51 File successfully downloaded
+16:59:51 Lock acquired to download file
+16:59:51 Starting new HTTPS connection (1): i.redd.it:443
+16:59:51 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://i.imgur.com/E2zAjfw.jpg
+	ID: 21qmdz
+	Title: Lord of The Rings Found today on rlotr
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:51 Domain: "imgur.com/" Album: "None" ID: "E2zAjfw" ext: ".jpg" bs: ""
+16:59:51 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:52 https://i.redd.it:443 "GET /7ru2j9ndmfdy.jpg HTTP/1.1" 200 1296568
+16:59:52 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:52 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:52 https://api.imgur.com:443 "GET /3/image/E2zAjfw HTTP/1.1" 200 369
+16:59:52 Imgur link: https://i.imgur.com/E2zAjfw.jpg
+16:59:53 File successfully downloaded
+16:59:53 Lock released
+16:59:53 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:53 
+SUBMISSION INFO THREAD 1
+	Initial URL: http://imgur.com/a/OYCju
+	ID: 3okwcu
+	Title: I edited the top 25 images from ralternativeart to be wallpaper size 1920x1080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:53 Domain: "imgur.com/" Album: "a/" ID: "OYCju" ext: "None" bs: ""
+16:59:53 https://i.imgur.com:443 "GET /Lva7YQS.jpg HTTP/1.1" 200 234080
+16:59:53 File successfully downloaded
+16:59:53 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:53 
+SUBMISSION INFO THREAD 0
 	Initial URL: https://i.imgur.com/nIbZJMt.png
 	ID: 8hls1z
 	Title: Rainy Day
-2019-06-27 16:27:03,503 Imgur ID: nIbZJMt
-2019-06-27 16:27:03,520 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:03,582 File successfully downloaded
-2019-06-27 16:27:03,587 get_size gigs: '0.04'
-2019-06-27 16:27:03,588 
-SUBMISSION INFO
-	Initial URL: https://i.reddituploads.com/1cbc03380dda40d6ada9cb6527bab46f?fit=max&h=1536&w=1536&s=3ef087e4fa9252aa8e558cca5a092b5c
-	ID: 5nc54s
-	Title: Star Wars Movie Wallpaper 2560x1600
-2019-06-27 16:27:03,588 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:03,678 get_size gigs: '0.04'
-2019-06-27 16:27:03,678 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/vrjbuxi408lx.png
-	ID: 52in8g
-	Title: Rainy day at the Krusty Krab
-2019-06-27 16:27:03,684 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:03,700 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:03,700 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:03,767 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:03,784 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:03,890 https://i.redd.it:443 "GET /vrjbuxi408lx.png HTTP/1.1" 200 2772916
-2019-06-27 16:27:03,917 https://api.imgur.com:443 "GET /3/image/nIbZJMt HTTP/1.1" 200 379
-2019-06-27 16:27:03,936 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:03,940 https://i.imgur.com:443 "GET /f6zJoJN.jpg HTTP/1.1" 200 93548
-2019-06-27 16:27:04,049 File successfully downloaded
-2019-06-27 16:27:04,059 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:04,101 https://i.imgur.com:443 "GET /nIbZJMt.png HTTP/1.1" 200 3968932
-2019-06-27 16:27:04,317 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:04,334 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:04,534 https://i.imgur.com:443 "GET /e6oWAcc.jpg HTTP/1.1" 200 260644
-2019-06-27 16:27:04,713 File successfully downloaded
-2019-06-27 16:27:04,720 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:04,914 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:04,919 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:05,526 https://i.imgur.com:443 "GET /cz3AVvK.jpg HTTP/1.1" 200 163258
-2019-06-27 16:27:05,661 File successfully downloaded
-2019-06-27 16:27:05,676 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:05,999 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:06,010 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:06,015 File successfully downloaded
-2019-06-27 16:27:06,127 get_size gigs: '0.05'
-2019-06-27 16:27:06,128 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/co4gny2nt8oz.jpg
-	ID: 72kz6v
-	Title: My Favorite Windows 10 Lock screen 1920  1080
-2019-06-27 16:27:06,136 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:06,178 https://i.imgur.com:443 "GET /9OWUHxc.jpg HTTP/1.1" 200 280560
-2019-06-27 16:27:06,373 File successfully downloaded
-2019-06-27 16:27:06,387 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:06,400 https://i.redd.it:443 "GET /co4gny2nt8oz.jpg HTTP/1.1" 200 473844
-2019-06-27 16:27:06,622 File successfully downloaded
-2019-06-27 16:27:06,667 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:06,699 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:06,745 get_size gigs: '0.05'
-2019-06-27 16:27:06,746 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/qqj4tnhc2qh21.png
-	ID: aso41g
-	Title: Blue Screen of Life 3840x2160
-2019-06-27 16:27:06,752 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:14,616 File successfully downloaded
-2019-06-27 16:27:14,687 get_size gigs: '0.05'
-2019-06-27 16:27:14,688 
-SUBMISSION INFO
-	Initial URL: https://imgur.com/BlHEH7t
-	ID: 7k2t9q
-	Title: Thor Trilogy Poster xpost rmarvelstudios
-2019-06-27 16:27:14,688 Imgur ID: BlHEH7t
-2019-06-27 16:27:14,691 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:14,871 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:14,871 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:15,101 https://api.imgur.com:443 "GET /3/image/BlHEH7t HTTP/1.1" 200 377
-2019-06-27 16:27:15,101 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:15,256 https://i.imgur.com:443 "GET /BlHEH7t.jpg HTTP/1.1" 200 49785
-2019-06-27 16:27:15,300 File successfully downloaded
-2019-06-27 16:27:15,378 get_size gigs: '0.05'
-2019-06-27 16:27:15,378 
-SUBMISSION INFO
-	Initial URL: https://i.imgur.com/hyt5lCu.jpg
-	ID: 7kdoyw
-	Title: The Falcon
-2019-06-27 16:27:15,378 Imgur ID: hyt5lCu
-2019-06-27 16:27:15,384 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:15,419 https://i.redd.it:443 "GET /qqj4tnhc2qh21.png HTTP/1.1" 200 70607
-2019-06-27 16:27:15,534 File successfully downloaded
-2019-06-27 16:27:15,621 get_size gigs: '0.05'
-2019-06-27 16:27:15,622 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/hhue62x2cehy.jpg
-	ID: 5vi7xk
-	Title: Planet Express 3000x1688
-2019-06-27 16:27:15,627 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:15,657 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:15,666 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:15,840 https://i.redd.it:443 "GET /hhue62x2cehy.jpg HTTP/1.1" 200 810550
-2019-06-27 16:27:15,868 https://api.imgur.com:443 "GET /3/image/hyt5lCu HTTP/1.1" 200 380
-2019-06-27 16:27:15,875 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:15,879 https://i.imgur.com:443 "GET /Rwowip0.jpg HTTP/1.1" 200 262683
-2019-06-27 16:27:16,101 File successfully downloaded
-2019-06-27 16:27:16,101 File successfully downloaded
-2019-06-27 16:27:16,117 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:16,167 https://i.imgur.com:443 "GET /hyt5lCu.jpg HTTP/1.1" 200 623149
-2019-06-27 16:27:16,200 get_size gigs: '0.05'
-2019-06-27 16:27:16,200 Error: Nice try...
-2019-06-27 16:27:16,313 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:16,326 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:16,431 File successfully downloaded
-2019-06-27 16:27:16,437 get_size gigs: '0.05'
-2019-06-27 16:27:16,438 
-SUBMISSION INFO
-	Initial URL: http://imgur.com/MYYtwkP
-	ID: 4y5bjc
-	Title: Spacing Out
-2019-06-27 16:27:16,438 Imgur ID: MYYtwkP
-2019-06-27 16:27:16,466 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:16,526 https://i.imgur.com:443 "GET /uRYs0Ns.jpg HTTP/1.1" 200 370672
-2019-06-27 16:27:16,585 get_size gigs: '0.05'
-2019-06-27 16:27:16,586 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/xhGdTZr.jpg
-	ID: 2daf0p
-	Title: After today's events I'd like to post this I found this on rQuotesPorn Apparently this was a quote from an AMA Mr Williams did for us
-2019-06-27 16:27:16,586 Imgur ID: xhGdTZr
-2019-06-27 16:27:16,603 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:16,650 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:16,661 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:16,719 File successfully downloaded
-2019-06-27 16:27:16,725 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:16,812 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:16,820 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:16,906 https://api.imgur.com:443 "GET /3/image/MYYtwkP HTTP/1.1" 200 381
-2019-06-27 16:27:16,911 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:16,923 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:16,924 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:17,030 https://api.imgur.com:443 "GET /3/image/xhGdTZr HTTP/1.1" 200 381
-2019-06-27 16:27:17,039 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:17,077 https://i.imgur.com:443 "GET /MYYtwkP.jpg HTTP/1.1" 200 143814
-2019-06-27 16:27:17,101 https://i.imgur.com:443 "GET /EjuwWUB.jpg HTTP/1.1" 200 154692
-2019-06-27 16:27:17,200 File successfully downloaded
-2019-06-27 16:27:17,215 https://i.imgur.com:443 "GET /xhGdTZr.jpg?1 HTTP/1.1" 200 101206
-2019-06-27 16:27:17,237 File successfully downloaded
-2019-06-27 16:27:17,245 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:17,307 File successfully downloaded
-2019-06-27 16:27:17,337 get_size gigs: '0.05'
-2019-06-27 16:27:17,338 
-SUBMISSION INFO
-	Initial URL: http://imgur.com/aZcB3op
-	ID: 4z69os
-	Title: The Descent
-2019-06-27 16:27:17,339 Imgur ID: aZcB3op
-2019-06-27 16:27:17,346 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:17,425 get_size gigs: '0.05'
-2019-06-27 16:27:17,426 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/59bsn5hgnojy.jpg
-	ID: 5xq6no
-	Title: Decided to combine two of my favorite wallpapers, Hex Fade  Blood Moon 1920 x 1080
-2019-06-27 16:27:17,430 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:17,534 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:17,551 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:17,600 https://i.redd.it:443 "GET /59bsn5hgnojy.jpg HTTP/1.1" 200 891157
-2019-06-27 16:27:17,663 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:17,672 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:17,882 https://i.imgur.com:443 "GET /ZBkgpw9.jpg HTTP/1.1" 200 190855
-2019-06-27 16:27:17,926 File successfully downloaded
-2019-06-27 16:27:17,997 File successfully downloaded
-2019-06-27 16:27:18,003 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:18,163 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:18,171 get_size gigs: '0.05'
-2019-06-27 16:27:18,174 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:18,175 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/et130z3.jpg
-	ID: 2q30ql
-	Title: How winter should look
-2019-06-27 16:27:18,176 Imgur ID: et130z3
-2019-06-27 16:27:18,182 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:18,317 https://i.imgur.com:443 "GET /0ClpSoh.jpg HTTP/1.1" 200 254667
-2019-06-27 16:27:18,354 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:18,364 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:18,486 File successfully downloaded
-2019-06-27 16:27:18,489 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:18,584 https://api.imgur.com:443 "GET /3/image/aZcB3op HTTP/1.1" 200 377
-2019-06-27 16:27:18,584 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:18,617 https://api.imgur.com:443 "GET /3/image/et130z3 HTTP/1.1" 200 374
-2019-06-27 16:27:18,617 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:18,651 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:18,651 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:18,737 https://i.imgur.com:443 "GET /aZcB3op.jpg HTTP/1.1" 200 310644
-2019-06-27 16:27:18,791 https://i.imgur.com:443 "GET /et130z3.jpg HTTP/1.1" 200 238403
-2019-06-27 16:27:18,837 https://i.imgur.com:443 "GET /xwI8Sl7.jpg HTTP/1.1" 200 235268
-2019-06-27 16:27:18,928 File successfully downloaded
-2019-06-27 16:27:18,974 File successfully downloaded
-2019-06-27 16:27:19,000 File successfully downloaded
-2019-06-27 16:27:19,016 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:19,075 get_size gigs: '0.05'
-2019-06-27 16:27:19,075 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/d11Zmqt.jpg
-	ID: 4ez121
-	Title: My wallpaper for about 2 years now I like to think of it as my happy place
-2019-06-27 16:27:19,075 Imgur ID: d11Zmqt
-2019-06-27 16:27:19,090 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:19,090 get_size gigs: '0.05'
-2019-06-27 16:27:19,090 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/bm20xrtazslz.jpg
-	ID: 700sq2
-	Title: CPU City
-2019-06-27 16:27:19,106 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:19,275 https://i.redd.it:443 "GET /bm20xrtazslz.jpg HTTP/1.1" 200 305211
-2019-06-27 16:27:19,277 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:19,284 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:19,365 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:19,379 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:19,433 File successfully downloaded
-2019-06-27 16:27:19,484 https://api.imgur.com:443 "GET /3/image/d11Zmqt HTTP/1.1" 200 376
-2019-06-27 16:27:19,500 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:19,534 get_size gigs: '0.05'
-2019-06-27 16:27:19,534 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/Vzh77Je.jpg
-	ID: 2gxsjw
-	Title: It's who we were 1600x900
-2019-06-27 16:27:19,534 Imgur ID: Vzh77Je
-2019-06-27 16:27:19,534 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:19,567 https://i.imgur.com:443 "GET /aqhvQVO.jpg HTTP/1.1" 200 201931
-2019-06-27 16:27:19,745 https://i.imgur.com:443 "GET /d11Zmqt.jpg HTTP/1.1" 200 973605
-2019-06-27 16:27:19,793 File successfully downloaded
-2019-06-27 16:27:19,800 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:19,801 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:19,812 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:20,052 File successfully downloaded
-2019-06-27 16:27:20,079 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:20,091 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:20,192 get_size gigs: '0.05'
-2019-06-27 16:27:20,193 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/lNeqdPV.jpg
-	ID: 3ncem9
-	Title: South Africa from space is something
-2019-06-27 16:27:20,193 Imgur ID: lNeqdPV
-2019-06-27 16:27:20,198 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:20,258 https://i.imgur.com:443 "GET /G4oibBm.jpg HTTP/1.1" 200 161117
-2019-06-27 16:27:20,363 File successfully downloaded
-2019-06-27 16:27:20,369 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:20,434 https://api.imgur.com:443 "GET /3/image/Vzh77Je HTTP/1.1" 200 377
-2019-06-27 16:27:20,434 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:20,542 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:20,546 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:20,593 https://i.imgur.com:443 "GET /Vzh77Je.jpg HTTP/1.1" 200 220338
-2019-06-27 16:27:20,707 File successfully downloaded
-2019-06-27 16:27:20,711 https://i.imgur.com:443 "GET /6CKIzFX.jpg HTTP/1.1" 200 209470
-2019-06-27 16:27:20,841 File successfully downloaded
-2019-06-27 16:27:20,847 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:20,851 get_size gigs: '0.05'
-2019-06-27 16:27:20,852 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/I4IF27V.jpg
-	ID: 2czbed
-	Title: Windows '95 default 1920x1080
-2019-06-27 16:27:20,852 Imgur ID: I4IF27V
-2019-06-27 16:27:20,857 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:21,017 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:21,017 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:21,131 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:21,141 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:21,155 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:21,162 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:21,213 https://api.imgur.com:443 "GET /3/image/lNeqdPV HTTP/1.1" 200 387
-2019-06-27 16:27:21,220 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:21,300 https://i.imgur.com:443 "GET /HqftxJ7.jpg HTTP/1.1" 200 147927
-2019-06-27 16:27:21,303 Error: [Errno 22] Invalid argument: "30. What's Goin' On?.jpg"
-2019-06-27 16:27:21,307 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:21,362 https://api.imgur.com:443 "GET /3/image/I4IF27V HTTP/1.1" 200 374
-2019-06-27 16:27:21,373 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:21,384 https://i.imgur.com:443 "GET /lNeqdPV.jpg HTTP/1.1" 200 628864
-2019-06-27 16:27:21,467 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:21,484 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:21,535 https://i.imgur.com:443 "GET /I4IF27V.png HTTP/1.1" 200 13332
-2019-06-27 16:27:21,601 File successfully downloaded
-2019-06-27 16:27:21,601 File successfully downloaded
-2019-06-27 16:27:21,652 https://i.imgur.com:443 "GET /d3KLumJ.jpg HTTP/1.1" 200 236391
-2019-06-27 16:27:21,772 get_size gigs: '0.06'
-2019-06-27 16:27:21,773 
-SUBMISSION INFO
-	Initial URL: http://www.imgur.com/ql3o2km
-	ID: 4xd43q
-	Title: No Man's Schwifty
-2019-06-27 16:27:21,773 Imgur ID: ql3o2km
-2019-06-27 16:27:21,779 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:21,795 get_size gigs: '0.06'
-2019-06-27 16:27:21,796 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/ykmkij0ddzpy.png
-	ID: 63v1nb
-	Title: Low Poly Car Chase 1920x1080
-2019-06-27 16:27:21,803 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:21,803 File successfully downloaded
-2019-06-27 16:27:21,810 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:21,991 https://i.redd.it:443 "GET /ykmkij0ddzpy.png HTTP/1.1" 200 2636981
-2019-06-27 16:27:21,998 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:22,008 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:22,226 https://api.imgur.com:443 "GET /3/image/ql3o2km HTTP/1.1" 200 370
-2019-06-27 16:27:22,236 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:22,375 https://i.imgur.com:443 "GET /ql3o2km.jpg HTTP/1.1" 200 227520
-2019-06-27 16:27:22,401 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:22,401 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:22,509 File successfully downloaded
-2019-06-27 16:27:22,585 https://i.imgur.com:443 "GET /ojtsMQJ.jpg HTTP/1.1" 200 276191
-2019-06-27 16:27:22,659 get_size gigs: '0.06'
-2019-06-27 16:27:22,660 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/7IgHxdh.jpg
-	ID: 4pshri
-	Title: Always one of my favourites
-2019-06-27 16:27:22,660 Imgur ID: 7IgHxdh
-2019-06-27 16:27:22,673 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:22,760 File successfully downloaded
-2019-06-27 16:27:22,768 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:22,860 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:22,867 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:22,950 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:22,950 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:23,062 https://api.imgur.com:443 "GET /3/image/7IgHxdh HTTP/1.1" 200 377
-2019-06-27 16:27:23,070 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:23,116 https://i.imgur.com:443 "GET /yUfkEJZ.jpg HTTP/1.1" 200 186731
-2019-06-27 16:27:23,226 File successfully downloaded
-2019-06-27 16:27:23,228 https://i.imgur.com:443 "GET /7IgHxdh.jpg HTTP/1.1" 200 181448
-2019-06-27 16:27:23,236 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:23,353 File successfully downloaded
-2019-06-27 16:27:23,469 get_size gigs: '0.06'
-2019-06-27 16:27:23,470 
-SUBMISSION INFO
-	Initial URL: https://i.imgur.com/NyOoWOg.jpg
-	ID: 751uce
-	Title: Solitude 2048x1319
-2019-06-27 16:27:23,470 Imgur ID: NyOoWOg
-2019-06-27 16:27:23,478 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:23,494 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:23,504 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:23,659 https://i.imgur.com:443 "GET /ld9QU8O.jpg HTTP/1.1" 200 189325
-2019-06-27 16:27:23,685 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:23,703 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:23,803 File successfully downloaded
-2019-06-27 16:27:23,810 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:23,984 https://api.imgur.com:443 "GET /3/image/NyOoWOg HTTP/1.1" 200 379
-2019-06-27 16:27:23,995 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:24,001 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:24,013 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:24,150 https://i.imgur.com:443 "GET /NyOoWOg.jpg HTTP/1.1" 200 128510
-2019-06-27 16:27:24,169 https://i.imgur.com:443 "GET /LK2wTCA.jpg HTTP/1.1" 200 245997
-2019-06-27 16:27:24,234 File successfully downloaded
-2019-06-27 16:27:24,319 File successfully downloaded
-2019-06-27 16:27:24,321 
-Finished imgur album
-2019-06-27 16:27:24,434 File successfully downloaded
-2019-06-27 16:27:24,451 get_size gigs: '0.06'
-2019-06-27 16:27:24,451 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/Rc52LiD.jpg
-	ID: 2ino8n
-	Title: Sesame Street
-2019-06-27 16:27:24,451 Imgur ID: Rc52LiD
-2019-06-27 16:27:24,484 get_size gigs: '0.06'
-2019-06-27 16:27:24,484 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:53 Domain: "imgur.com/" Album: "None" ID: "nIbZJMt" ext: ".png" bs: ""
+16:59:53 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:53 https://i.imgur.com:443 "GET /E2zAjfw.jpg HTTP/1.1" 200 806891
+16:59:53 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:53 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:54 File successfully downloaded
+16:59:54 Locked threads for imgur album
+16:59:54 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:54 https://api.imgur.com:443 "GET /3/image/nIbZJMt HTTP/1.1" 200 378
+16:59:54 Imgur link: https://i.imgur.com/nIbZJMt.png
+16:59:54 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://i.imgur.com/bGzjG8g.jpg
+	ID: 2190q3
+	Title: My very subtle Godzilla Wallpaper 1920x1080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+16:59:54 Domain: "imgur.com/" Album: "None" ID: "bGzjG8g" ext: ".jpg" bs: ""
+16:59:54 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:54 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:54 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:54 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:54 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:54 https://api.imgur.com:443 "GET /3/album/OYCju/images HTTP/1.1" 200 1845
+16:59:54 Downloading imgur album
+16:59:54 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:54 https://api.imgur.com:443 "GET /3/image/bGzjG8g HTTP/1.1" 200 378
+16:59:54 Imgur link: https://i.imgur.com/bGzjG8g.jpg
+16:59:54 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:54 Imgur link: https://i.imgur.com/GdgafbZ.jpg
+16:59:54 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:55 https://i.imgur.com:443 "GET /GdgafbZ.jpg HTTP/1.1" 200 228995
+16:59:55 Imgur File successfully downloaded
+16:59:55 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:55 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:55 Imgur link: https://i.imgur.com/29gaYRn.jpg
+16:59:55 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:55 https://i.imgur.com:443 "GET /29gaYRn.jpg HTTP/1.1" 200 182494
+16:59:55 Imgur File successfully downloaded
+16:59:55 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:56 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:56 Imgur link: https://i.imgur.com/M3sOlMg.jpg
+16:59:56 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:56 https://i.imgur.com:443 "GET /M3sOlMg.jpg HTTP/1.1" 200 167631
+16:59:56 Imgur File successfully downloaded
+16:59:56 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:56 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:56 Imgur link: https://i.imgur.com/H1vmUjr.jpg
+16:59:56 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:57 https://i.imgur.com:443 "GET /H1vmUjr.jpg HTTP/1.1" 200 185645
+16:59:57 Imgur File successfully downloaded
+16:59:57 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:57 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:57 Imgur link: https://i.imgur.com/xRz4OZJ.jpg
+16:59:57 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:57 https://i.imgur.com:443 "GET /xRz4OZJ.jpg HTTP/1.1" 200 286766
+16:59:57 Imgur File successfully downloaded
+16:59:57 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:57 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:57 Imgur link: https://i.imgur.com/FSjKokw.jpg
+16:59:57 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:58 https://i.imgur.com:443 "GET /FSjKokw.jpg HTTP/1.1" 200 262433
+16:59:58 Imgur File successfully downloaded
+16:59:58 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:58 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:58 Imgur link: https://i.imgur.com/f6zJoJN.jpg
+16:59:58 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:58 https://i.imgur.com:443 "GET /f6zJoJN.jpg HTTP/1.1" 200 93548
+16:59:58 Imgur File successfully downloaded
+16:59:58 Starting new HTTPS connection (1): api.imgur.com:443
+16:59:58 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+16:59:58 Imgur link: https://i.imgur.com/e6oWAcc.jpg
+16:59:58 Starting new HTTPS connection (1): i.imgur.com:443
+16:59:59 https://i.imgur.com:443 "GET /e6oWAcc.jpg HTTP/1.1" 200 260644
+16:59:59 Imgur File successfully downloaded
+16:59:59 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:01 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:01 Imgur link: https://i.imgur.com/cz3AVvK.jpg
+17:00:01 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:01 https://i.imgur.com:443 "GET /cz3AVvK.jpg HTTP/1.1" 200 163258
+17:00:01 Imgur File successfully downloaded
+17:00:01 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:01 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:01 Imgur link: https://i.imgur.com/9OWUHxc.jpg
+17:00:01 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:01 https://i.imgur.com:443 "GET /9OWUHxc.jpg HTTP/1.1" 200 280560
+17:00:01 Imgur File successfully downloaded
+17:00:01 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:02 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:02 Imgur link: https://i.imgur.com/Rwowip0.jpg
+17:00:02 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:02 https://i.imgur.com:443 "GET /Rwowip0.jpg HTTP/1.1" 200 262683
+17:00:02 Imgur File successfully downloaded
+17:00:02 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:02 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:02 Imgur link: https://i.imgur.com/uRYs0Ns.jpg
+17:00:02 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:02 https://i.imgur.com:443 "GET /uRYs0Ns.jpg HTTP/1.1" 200 370672
+17:00:03 Imgur File successfully downloaded
+17:00:03 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:03 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:03 Imgur link: https://i.imgur.com/EjuwWUB.jpg
+17:00:03 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:03 https://i.imgur.com:443 "GET /EjuwWUB.jpg HTTP/1.1" 200 154692
+17:00:03 Imgur File successfully downloaded
+17:00:03 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:03 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:03 Imgur link: https://i.imgur.com/ZBkgpw9.jpg
+17:00:03 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:04 https://i.imgur.com:443 "GET /ZBkgpw9.jpg HTTP/1.1" 200 190855
+17:00:04 Imgur File successfully downloaded
+17:00:04 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:04 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:04 Imgur link: https://i.imgur.com/0ClpSoh.jpg
+17:00:04 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:04 https://i.imgur.com:443 "GET /0ClpSoh.jpg HTTP/1.1" 200 254667
+17:00:04 Imgur File successfully downloaded
+17:00:04 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:05 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:05 Imgur link: https://i.imgur.com/xwI8Sl7.jpg
+17:00:05 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:05 https://i.imgur.com:443 "GET /xwI8Sl7.jpg HTTP/1.1" 200 235268
+17:00:05 Imgur File successfully downloaded
+17:00:05 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:05 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:05 Imgur link: https://i.imgur.com/aqhvQVO.jpg
+17:00:05 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:05 https://i.imgur.com:443 "GET /aqhvQVO.jpg HTTP/1.1" 200 201931
+17:00:06 Imgur File successfully downloaded
+17:00:06 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:06 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:06 Imgur link: https://i.imgur.com/G4oibBm.jpg
+17:00:06 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:07 https://i.imgur.com:443 "GET /G4oibBm.jpg HTTP/1.1" 200 161117
+17:00:07 Imgur File successfully downloaded
+17:00:07 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:07 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:07 Imgur link: https://i.imgur.com/6CKIzFX.jpg
+17:00:07 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:08 https://i.imgur.com:443 "GET /6CKIzFX.jpg HTTP/1.1" 200 209470
+17:00:08 Imgur File successfully downloaded
+17:00:08 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:09 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:09 Imgur link: https://i.imgur.com/HqftxJ7.jpg
+17:00:09 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:09 https://i.imgur.com:443 "GET /HqftxJ7.jpg HTTP/1.1" 200 147927
+17:00:09 Imgur File successfully downloaded
+17:00:09 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:10 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:10 Imgur link: https://i.imgur.com/d3KLumJ.jpg
+17:00:10 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:10 https://i.imgur.com:443 "GET /d3KLumJ.jpg HTTP/1.1" 200 236391
+17:00:11 Imgur File successfully downloaded
+17:00:11 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:12 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:12 Imgur link: https://i.imgur.com/ojtsMQJ.jpg
+17:00:12 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:12 https://i.imgur.com:443 "GET /ojtsMQJ.jpg HTTP/1.1" 200 276191
+17:00:12 Imgur File successfully downloaded
+17:00:12 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:12 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:12 Imgur link: https://i.imgur.com/yUfkEJZ.jpg
+17:00:12 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:12 https://i.imgur.com:443 "GET /yUfkEJZ.jpg HTTP/1.1" 200 186731
+17:00:13 Imgur File successfully downloaded
+17:00:13 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:13 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:13 Imgur link: https://i.imgur.com/ld9QU8O.jpg
+17:00:13 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:13 https://i.imgur.com:443 "GET /ld9QU8O.jpg HTTP/1.1" 200 189325
+17:00:13 Imgur File successfully downloaded
+17:00:13 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:13 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:13 Imgur link: https://i.imgur.com/LK2wTCA.jpg
+17:00:13 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:14 https://i.imgur.com:443 "GET /LK2wTCA.jpg HTTP/1.1" 200 245997
+17:00:14 Imgur File successfully downloaded
+17:00:14 Finished imgur album
+17:00:14 Released lock after imgur album
+17:00:14 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:14 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.imgur.com/skGaUbi.png
 	ID: 77cx82
 	Title: My take at tabletop photography They didn't like it as much at pics, but maybe someone here will like it better
-2019-06-27 16:27:24,484 Imgur ID: skGaUbi
-2019-06-27 16:27:24,484 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:24,516 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:24,635 get_size gigs: '0.06'
-2019-06-27 16:27:24,636 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/yxvtrkc3crfz.jpg
-	ID: 6toxpc
-	Title: Koi Fishes
-2019-06-27 16:27:24,640 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:24,679 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:24,689 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:24,700 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:24,700 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:24,807 https://i.redd.it:443 "GET /yxvtrkc3crfz.jpg HTTP/1.1" 200 188013
-2019-06-27 16:27:24,880 https://api.imgur.com:443 "GET /3/image/skGaUbi HTTP/1.1" 200 372
-2019-06-27 16:27:24,892 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:24,918 File successfully downloaded
-2019-06-27 16:27:25,034 get_size gigs: '0.06'
-2019-06-27 16:27:25,034 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/z99lTdC.png
-	ID: 3zaovb
-	Title: Low Poly Dog
-2019-06-27 16:27:25,034 Imgur ID: z99lTdC
-2019-06-27 16:27:25,034 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:25,051 https://i.imgur.com:443 "GET /skGaUbi.png HTTP/1.1" 200 1426560
-2019-06-27 16:27:25,051 https://api.imgur.com:443 "GET /3/image/Rc52LiD HTTP/1.1" 200 376
-2019-06-27 16:27:25,067 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:25,228 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:25,236 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:25,367 https://api.imgur.com:443 "GET /3/image/z99lTdC HTTP/1.1" 200 375
-2019-06-27 16:27:25,386 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:25,467 https://i.imgur.com:443 "GET /Rc52LiD.jpg HTTP/1.1" 200 349102
-2019-06-27 16:27:25,648 File successfully downloaded
-2019-06-27 16:27:25,784 https://i.imgur.com:443 "GET /z99lTdC.jpg HTTP/1.1" 200 948934
-2019-06-27 16:27:25,784 get_size gigs: '0.06'
-2019-06-27 16:27:25,784 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/s4FyU2b.jpg
-	ID: 6js1xd
-	Title: How winter should look
-2019-06-27 16:27:25,784 Imgur ID: s4FyU2b
-2019-06-27 16:27:25,801 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:26,071 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:26,084 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:26,284 https://api.imgur.com:443 "GET /3/image/s4FyU2b HTTP/1.1" 200 375
-2019-06-27 16:27:26,301 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:26,316 File successfully downloaded
-2019-06-27 16:27:26,468 get_size gigs: '0.06'
-2019-06-27 16:27:26,469 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:14 Domain: "imgur.com/" Album: "None" ID: "skGaUbi" ext: ".png" bs: ""
+17:00:14 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:14 https://i.imgur.com:443 "GET /nIbZJMt.png HTTP/1.1" 200 3968932
+17:00:14 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:14 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:15 https://api.imgur.com:443 "GET /3/image/skGaUbi HTTP/1.1" 200 372
+17:00:15 Imgur link: https://i.imgur.com/skGaUbi.png
+17:00:16 File successfully downloaded
+17:00:16 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:16 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://imgur.com/BlHEH7t
+	ID: 7k2t9q
+	Title: Thor Trilogy Poster xpost rmarvelstudios
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:16 Domain: "imgur.com/" Album: "None" ID: "BlHEH7t" ext: "None" bs: ""
+17:00:16 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:16 https://i.imgur.com:443 "GET /bGzjG8g.jpg HTTP/1.1" 200 397673
+17:00:17 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:17 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:17 File successfully downloaded
+17:00:17 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:17 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.reddituploads.com/1cbc03380dda40d6ada9cb6527bab46f?fit=max&h=1536&w=1536&s=3ef087e4fa9252aa8e558cca5a092b5c
+	ID: 5nc54s
+	Title: Star Wars Movie Wallpaper 2560x1600
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:17 https://api.imgur.com:443 "GET /3/image/BlHEH7t HTTP/1.1" 200 376
+17:00:17 Imgur link: https://i.imgur.com/BlHEH7t.jpg
+17:00:17 https://i.imgur.com:443 "GET /skGaUbi.png HTTP/1.1" 200 1426560
+17:00:18 File successfully downloaded
+17:00:18 Lock acquired to download file
+17:00:18 Starting new HTTPS connection (1): i.reddituploads.com:443
+17:00:18 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.imgur.com/WGq0xQp.png
 	ID: 84d7ax
 	Title: Did You Come Back To Say You Forgive Me To Save My Soul
-2019-06-27 16:27:26,469 Imgur ID: WGq0xQp
-2019-06-27 16:27:26,475 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:26,491 https://i.imgur.com:443 "GET /s4FyU2b.jpg HTTP/1.1" 200 238403
-2019-06-27 16:27:26,637 File successfully downloaded
-2019-06-27 16:27:26,667 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:26,685 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:26,786 get_size gigs: '0.06'
-2019-06-27 16:27:26,787 
-SUBMISSION INFO
-	Initial URL: http://imgur.com/a/KOeaw
-	ID: 2s61l2
-	Title: Gotham 75K  A rare high altitude night flight above NYC produces some great photos
-2019-06-27 16:27:26,787 Imgur ID: KOeaw
-2019-06-27 16:27:26,791 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:26,934 File successfully downloaded
-2019-06-27 16:27:27,034 get_size gigs: '0.06'
-2019-06-27 16:27:27,051 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:27,051 
-SUBMISSION INFO
-	Initial URL: https://i.imgur.com/PkVweyp.jpg
-	ID: a8a0i4
-	Title: Cthulhu 19201080
-2019-06-27 16:27:27,051 Imgur ID: PkVweyp
-2019-06-27 16:27:27,051 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:27,051 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:27,270 https://api.imgur.com:443 "GET /3/album/KOeaw/images HTTP/1.1" 200 893
-2019-06-27 16:27:27,270 Downloading imgur album
-2019-06-27 16:27:27,284 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:27,317 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:27,317 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:27,478 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:27,484 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:27,501 https://api.imgur.com:443 "GET /3/image/PkVweyp HTTP/1.1" 200 382
-2019-06-27 16:27:27,517 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:27,668 https://i.imgur.com:443 "GET /HSEvn6M.jpg HTTP/1.1" 200 1879404
-2019-06-27 16:27:27,733 https://i.imgur.com:443 "GET /PkVweyp.jpg HTTP/1.1" 200 771018
-2019-06-27 16:27:27,988 File successfully downloaded
-2019-06-27 16:27:28,163 get_size gigs: '0.06'
-2019-06-27 16:27:28,167 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/s79v0pv9c1y01.png
-	ID: 8jmb8i
-	Title: Galaxy
-2019-06-27 16:27:28,172 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:28,340 https://i.redd.it:443 "GET /s79v0pv9c1y01.png HTTP/1.1" 200 625955
-2019-06-27 16:27:28,531 https://api.imgur.com:443 "GET /3/image/WGq0xQp HTTP/1.1" 200 379
-2019-06-27 16:27:28,544 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:28,602 File successfully downloaded
-2019-06-27 16:27:28,717 https://i.imgur.com:443 "GET /WGq0xQp.png HTTP/1.1" 200 4019400
-2019-06-27 16:27:28,750 get_size gigs: '0.06'
-2019-06-27 16:27:28,751 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/J8HGklN.jpg
-	ID: 29jw6y
-	Title: Bruce Lee Preaching Motivation
-2019-06-27 16:27:28,752 Imgur ID: J8HGklN
-2019-06-27 16:27:28,760 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:28,951 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:28,964 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:29,156 File successfully downloaded
-2019-06-27 16:27:29,162 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:29,201 https://api.imgur.com:443 "GET /3/image/J8HGklN HTTP/1.1" 200 380
-2019-06-27 16:27:29,217 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:29,384 https://i.imgur.com:443 "GET /J8HGklN.jpg HTTP/1.1" 200 212305
-2019-06-27 16:27:29,525 File successfully downloaded
-2019-06-27 16:27:29,743 get_size gigs: '0.07'
-2019-06-27 16:27:29,744 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/CFFjH48.jpg
-	ID: 3d0lux
-	Title: Empire Strikes Back meets Japan 1920x1080
-2019-06-27 16:27:29,744 Imgur ID: CFFjH48
-2019-06-27 16:27:29,751 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:29,951 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:29,951 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:30,184 https://api.imgur.com:443 "GET /3/image/CFFjH48 HTTP/1.1" 200 384
-2019-06-27 16:27:30,201 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:30,417 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:30,417 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:30,587 https://i.imgur.com:443 "GET /onpWTkr.jpg HTTP/1.1" 200 1729755
-2019-06-27 16:27:30,655 https://i.imgur.com:443 "GET /CFFjH48.jpg HTTP/1.1" 200 305569
-2019-06-27 16:27:30,854 File successfully downloaded
-2019-06-27 16:27:31,088 File successfully downloaded
-2019-06-27 16:27:31,136 get_size gigs: '0.07'
-2019-06-27 16:27:31,284 get_size gigs: '0.07'
-2019-06-27 16:27:31,285 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:18 Domain: "imgur.com/" Album: "None" ID: "WGq0xQp" ext: ".png" bs: ""
+17:00:18 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:18 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:18 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:19 https://api.imgur.com:443 "GET /3/image/WGq0xQp HTTP/1.1" 200 376
+17:00:19 Imgur link: https://i.imgur.com/WGq0xQp.png
+17:00:19 https://i.reddituploads.com:443 "GET /1cbc03380dda40d6ada9cb6527bab46f?fit=max&h=1536&w=1536&s=3ef087e4fa9252aa8e558cca5a092b5c HTTP/1.1" 200 2078881
+17:00:20 File successfully downloaded
+17:00:20 Lock released
+17:00:20 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:20 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.redd.it/vrjbuxi408lx.png
+	ID: 52in8g
+	Title: Rainy day at the Krusty Krab
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:20 https://i.imgur.com:443 "GET /BlHEH7t.jpg HTTP/1.1" 200 49785
+17:00:21 File successfully downloaded
+17:00:21 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:21 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.imgur.com/hyt5lCu.jpg
+	ID: 7kdoyw
+	Title: The Falcon
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:21 Domain: "imgur.com/" Album: "None" ID: "hyt5lCu" ext: ".jpg" bs: ""
+17:00:21 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:21 https://i.imgur.com:443 "GET /WGq0xQp.png HTTP/1.1" 200 4019400
+17:00:21 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:21 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:21 https://api.imgur.com:443 "GET /3/image/hyt5lCu HTTP/1.1" 200 377
+17:00:21 Imgur link: https://i.imgur.com/hyt5lCu.jpg
+17:00:23 File successfully downloaded
+17:00:23 Lock acquired to download file
+17:00:23 Starting new HTTPS connection (1): i.redd.it:443
+17:00:24 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/v4ikz5ixmgcy.jpg
 	ID: 5qnpjs
 	Title: A Tree with a Volcano in the Background
-2019-06-27 16:27:31,289 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:31,479 https://i.redd.it:443 "GET /v4ikz5ixmgcy.jpg HTTP/1.1" 200 658787
-2019-06-27 16:27:31,784 File successfully downloaded
-2019-06-27 16:27:31,967 get_size gigs: '0.07'
-2019-06-27 16:27:31,967 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:24 https://i.redd.it:443 "GET /vrjbuxi408lx.png HTTP/1.1" 200 2772916
+17:00:25 File successfully downloaded
+17:00:25 Lock released
+17:00:25 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:25 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.redd.it/co4gny2nt8oz.jpg
+	ID: 72kz6v
+	Title: My Favorite Windows 10 Lock screen 1920  1080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:25 https://i.imgur.com:443 "GET /hyt5lCu.jpg HTTP/1.1" 200 623149
+17:00:25 File successfully downloaded
+17:00:25 Lock acquired to download file
+17:00:25 Starting new HTTPS connection (1): i.redd.it:443
+17:00:25 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/xhGdTZr.jpg
+	ID: 2daf0p
+	Title: After today's events I'd like to post this I found this on rQuotesPorn Apparently this was a quote from an AMA Mr Williams did for us
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:25 Domain: "imgur.com/" Album: "None" ID: "xhGdTZr" ext: ".jpg" bs: ""
+17:00:25 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:25 https://i.redd.it:443 "GET /v4ikz5ixmgcy.jpg HTTP/1.1" 200 658787
+17:00:25 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:25 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:25 File successfully downloaded
+17:00:25 Lock released
+17:00:25 Lock acquired to download file
+17:00:26 Starting new HTTPS connection (1): i.redd.it:443
+17:00:26 https://api.imgur.com:443 "GET /3/image/xhGdTZr HTTP/1.1" 200 380
+17:00:26 Imgur link: https://i.imgur.com/xhGdTZr.jpg?1
+17:00:26 https://i.redd.it:443 "GET /co4gny2nt8oz.jpg HTTP/1.1" 200 473844
+17:00:26 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/favan7n8efkz.png
 	ID: 6ym1cj
 	Title: This windows 95' aesthetic wallpaper i spent too long making 2560x1600
-2019-06-27 16:27:31,967 File successfully downloaded
-2019-06-27 16:27:31,967 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:31,984 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:32,167 https://i.redd.it:443 "GET /favan7n8efkz.png HTTP/1.1" 200 1277647
-2019-06-27 16:27:32,524 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:32,534 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:32,748 https://i.imgur.com:443 "GET /AdlyZgO.jpg HTTP/1.1" 200 1838203
-2019-06-27 16:27:33,263 File successfully downloaded
-2019-06-27 16:27:33,269 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:33,438 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:33,451 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:33,529 File successfully downloaded
-2019-06-27 16:27:33,666 https://i.imgur.com:443 "GET /DCVoXFL.jpg HTTP/1.1" 200 1651213
-2019-06-27 16:27:33,677 get_size gigs: '0.07'
-2019-06-27 16:27:33,678 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:26 File successfully downloaded
+17:00:26 Lock released
+17:00:26 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:26 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.redd.it/qqj4tnhc2qh21.png
+	ID: aso41g
+	Title: Blue Screen of Life 3840x2160
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:26 https://i.imgur.com:443 "GET /xhGdTZr.jpg?1 HTTP/1.1" 200 101206
+17:00:26 File successfully downloaded
+17:00:26 Lock acquired to download file
+17:00:26 Starting new HTTPS connection (1): i.redd.it:443
+17:00:27 https://i.redd.it:443 "GET /favan7n8efkz.png HTTP/1.1" 200 1277647
+17:00:27 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.redd.it/59bsn5hgnojy.jpg
+	ID: 5xq6no
+	Title: Decided to combine two of my favorite wallpapers, Hex Fade  Blood Moon 1920 x 1080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:27 File successfully downloaded
+17:00:27 Lock released
+17:00:27 Lock acquired to download file
+17:00:27 Starting new HTTPS connection (1): i.redd.it:443
+17:00:27 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.imgur.com/ae4xtKY.jpg
 	ID: 3gepxh
 	Title: The risk I took was calculated, but man, am I bad at math 1920x1080
-2019-06-27 16:27:33,678 Imgur ID: ae4xtKY
-2019-06-27 16:27:33,684 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:34,034 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:34,052 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:34,200 File successfully downloaded
-2019-06-27 16:27:34,205 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:34,267 https://api.imgur.com:443 "GET /3/image/ae4xtKY HTTP/1.1" 200 379
-2019-06-27 16:27:34,267 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:34,381 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:34,390 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:34,434 https://i.imgur.com:443 "GET /ae4xtKY.jpg HTTP/1.1" 200 69584
-2019-06-27 16:27:34,508 File successfully downloaded
-2019-06-27 16:27:34,538 https://i.imgur.com:443 "GET /GncthN7.jpg HTTP/1.1" 200 990294
-2019-06-27 16:27:34,651 get_size gigs: '0.07'
-2019-06-27 16:27:34,651 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:27 Domain: "imgur.com/" Album: "None" ID: "ae4xtKY" ext: ".jpg" bs: ""
+17:00:27 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:27 https://i.redd.it:443 "GET /qqj4tnhc2qh21.png HTTP/1.1" 200 70607
+17:00:27 File successfully downloaded
+17:00:27 Lock released
+17:00:27 Lock acquired to download file
+17:00:27 Starting new HTTPS connection (1): i.redd.it:443
+17:00:27 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:27 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:27 https://i.redd.it:443 "GET /59bsn5hgnojy.jpg HTTP/1.1" 200 891157
+17:00:28 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.redd.it/hhue62x2cehy.jpg
+	ID: 5vi7xk
+	Title: Planet Express 3000x1688
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:28 File successfully downloaded
+17:00:28 Lock released
+17:00:28 Lock acquired to download file
+17:00:28 Starting new HTTPS connection (1): i.redd.it:443
+17:00:28 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/et130z3.jpg
+	ID: 2q30ql
+	Title: How winter should look
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:28 Domain: "imgur.com/" Album: "None" ID: "et130z3" ext: ".jpg" bs: ""
+17:00:28 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:28 https://i.redd.it:443 "GET /hhue62x2cehy.jpg HTTP/1.1" 200 810550
+17:00:28 File successfully downloaded
+17:00:28 Lock released
+17:00:28 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://imgur.com/MYYtwkP
+	ID: 4y5bjc
+	Title: Spacing Out
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:28 Domain: "imgur.com/" Album: "None" ID: "MYYtwkP" ext: "None" bs: ""
+17:00:28 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:29 https://api.imgur.com:443 "GET /3/image/ae4xtKY HTTP/1.1" 200 382
+17:00:29 Imgur link: https://i.imgur.com/ae4xtKY.jpg
+17:00:29 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:29 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:29 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:29 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:29 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:29 https://i.imgur.com:443 "GET /ae4xtKY.jpg HTTP/1.1" 200 69584
+17:00:29 File successfully downloaded
+17:00:29 https://api.imgur.com:443 "GET /3/image/et130z3 HTTP/1.1" 200 376
+17:00:29 Imgur link: https://i.imgur.com/et130z3.jpg
+17:00:29 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:29 https://api.imgur.com:443 "GET /3/image/MYYtwkP HTTP/1.1" 200 383
+17:00:29 Imgur link: https://i.imgur.com/MYYtwkP.jpg
+17:00:29 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/bbflzw8lmfoz.png
 	ID: 72sh28
 	Title: Procedurally generated colorburst Every pixel is a different color 2560x1440
-2019-06-27 16:27:34,667 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:34,883 https://i.redd.it:443 "GET /bbflzw8lmfoz.png HTTP/1.1" 200 7202966
-2019-06-27 16:27:34,897 File successfully downloaded
-2019-06-27 16:27:34,902 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:35,176 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:35,194 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:35,517 https://i.imgur.com:443 "GET /I0zYjsT.jpg HTTP/1.1" 200 1661849
-2019-06-27 16:27:36,400 File successfully downloaded
-2019-06-27 16:27:36,411 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:36,666 File successfully downloaded
-2019-06-27 16:27:36,755 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:36,765 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:36,783 get_size gigs: '0.08'
-2019-06-27 16:27:36,784 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:29 https://i.imgur.com:443 "GET /et130z3.jpg HTTP/1.1" 200 238403
+17:00:29 File successfully downloaded
+17:00:29 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:29 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.redd.it/bm20xrtazslz.jpg
+	ID: 700sq2
+	Title: CPU City
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:29 https://i.imgur.com:443 "GET /MYYtwkP.jpg HTTP/1.1" 200 143814
+17:00:30 File successfully downloaded
+17:00:30 Lock acquired to download file
+17:00:30 Starting new HTTPS connection (1): i.redd.it:443
+17:00:30 https://i.redd.it:443 "GET /bbflzw8lmfoz.png HTTP/1.1" 200 7202966
+17:00:30 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://imgur.com/aZcB3op
+	ID: 4z69os
+	Title: The Descent
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:30 Domain: "imgur.com/" Album: "None" ID: "aZcB3op" ext: "None" bs: ""
+17:00:30 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:30 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:30 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:30 https://api.imgur.com:443 "GET /3/image/aZcB3op HTTP/1.1" 200 378
+17:00:30 Imgur link: https://i.imgur.com/aZcB3op.jpg
+17:00:32 File successfully downloaded
+17:00:32 Lock released
+17:00:32 Lock acquired to download file
+17:00:32 Starting new HTTPS connection (1): i.redd.it:443
+17:00:32 
+SUBMISSION INFO THREAD 1
 	Initial URL: http://imgur.com/D98CXvp
 	ID: 6wrzye
 	Title: Floppy
-2019-06-27 16:27:36,784 Imgur ID: D98CXvp
-2019-06-27 16:27:36,791 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:36,950 https://i.imgur.com:443 "GET /mj2QAev.jpg HTTP/1.1" 200 1610508
-2019-06-27 16:27:36,967 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:36,967 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:37,204 https://api.imgur.com:443 "GET /3/image/D98CXvp HTTP/1.1" 200 411
-2019-06-27 16:27:37,217 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:37,384 https://i.imgur.com:443 "GET /D98CXvp.jpg HTTP/1.1" 200 96450
-2019-06-27 16:27:37,471 File successfully downloaded
-2019-06-27 16:27:37,617 get_size gigs: '0.08'
-2019-06-27 16:27:37,617 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:32 Domain: "imgur.com/" Album: "None" ID: "D98CXvp" ext: "None" bs: ""
+17:00:32 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:32 https://i.redd.it:443 "GET /bm20xrtazslz.jpg HTTP/1.1" 200 305211
+17:00:33 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:33 File successfully downloaded
+17:00:33 Lock released
+17:00:33 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:33 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:33 https://i.imgur.com:443 "GET /aZcB3op.jpg HTTP/1.1" 200 310644
+17:00:33 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/Vzh77Je.jpg
+	ID: 2gxsjw
+	Title: It's who we were 1600x900
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:33 Domain: "imgur.com/" Album: "None" ID: "Vzh77Je" ext: ".jpg" bs: ""
+17:00:33 https://api.imgur.com:443 "GET /3/image/D98CXvp HTTP/1.1" 200 410
+17:00:33 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:33 Imgur link: https://i.imgur.com/D98CXvp.jpg
+17:00:33 File successfully downloaded
+17:00:33 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:33 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://i.imgur.com/d11Zmqt.jpg
+	ID: 4ez121
+	Title: My wallpaper for about 2 years now I like to think of it as my happy place
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:33 Domain: "imgur.com/" Album: "None" ID: "d11Zmqt" ext: ".jpg" bs: ""
+17:00:33 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:33 https://i.imgur.com:443 "GET /D98CXvp.jpg HTTP/1.1" 200 96450
+17:00:33 File successfully downloaded
+17:00:33 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:33 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:33 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:33 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:34 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/g9ev38algbqz.jpg
 	ID: 74s8mv
 	Title: That's No Mountain 1920x1080
-2019-06-27 16:27:37,617 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:37,851 https://i.redd.it:443 "GET /g9ev38algbqz.jpg HTTP/1.1" 200 683207
-2019-06-27 16:27:38,234 File successfully downloaded
-2019-06-27 16:27:38,250 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:38,463 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:38,468 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:38,621 https://i.imgur.com:443 "GET /wYekTr5.jpg HTTP/1.1" 200 1557120
-2019-06-27 16:27:38,752 File successfully downloaded
-2019-06-27 16:27:38,878 get_size gigs: '0.08'
-2019-06-27 16:27:38,879 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:34 Lock acquired to download file
+17:00:34 Starting new HTTPS connection (1): i.redd.it:443
+17:00:34 https://api.imgur.com:443 "GET /3/image/d11Zmqt HTTP/1.1" 200 374
+17:00:34 Imgur link: https://i.imgur.com/d11Zmqt.jpg
+17:00:34 https://api.imgur.com:443 "GET /3/image/Vzh77Je HTTP/1.1" 200 375
+17:00:34 Imgur link: https://i.imgur.com/Vzh77Je.jpg
+17:00:34 https://i.redd.it:443 "GET /g9ev38algbqz.jpg HTTP/1.1" 200 683207
+17:00:34 File successfully downloaded
+17:00:34 Lock released
+17:00:34 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:34 
+SUBMISSION INFO THREAD 1
 	Initial URL: http://imgur.com/vAYWvAh
 	ID: 36m2oo
 	Title: Star Wars  Samurai style
-2019-06-27 16:27:38,879 Imgur ID: vAYWvAh
-2019-06-27 16:27:38,882 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:39,051 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:39,067 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:39,857 File successfully downloaded
-2019-06-27 16:27:39,857 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:40,315 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:40,320 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:40,533 https://i.imgur.com:443 "GET /UID37ZR.jpg HTTP/1.1" 200 1762334
-2019-06-27 16:27:40,806 https://api.imgur.com:443 "GET /3/image/vAYWvAh HTTP/1.1" 200 384
-2019-06-27 16:27:40,818 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:40,980 https://i.imgur.com:443 "GET /vAYWvAh.jpg HTTP/1.1" 200 467127
-2019-06-27 16:27:41,335 File successfully downloaded
-2019-06-27 16:27:41,496 get_size gigs: '0.08'
-2019-06-27 16:27:41,498 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:34 Domain: "imgur.com/" Album: "None" ID: "vAYWvAh" ext: "None" bs: ""
+17:00:34 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:34 https://i.imgur.com:443 "GET /d11Zmqt.jpg HTTP/1.1" 200 973605
+17:00:34 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:34 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:35 File successfully downloaded
+17:00:35 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:35 https://api.imgur.com:443 "GET /3/image/vAYWvAh HTTP/1.1" 200 383
+17:00:35 Imgur link: https://i.imgur.com/vAYWvAh.jpg
+17:00:35 https://i.imgur.com:443 "GET /Vzh77Je.jpg HTTP/1.1" 200 220338
+17:00:35 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://i.imgur.com/lNeqdPV.jpg
+	ID: 3ncem9
+	Title: South Africa from space is something
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:35 Domain: "imgur.com/" Album: "None" ID: "lNeqdPV" ext: ".jpg" bs: ""
+17:00:35 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:35 File successfully downloaded
+17:00:35 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:35 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:35 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:35 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/I4IF27V.jpg
+	ID: 2czbed
+	Title: Windows '95 default 1920x1080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:35 Domain: "imgur.com/" Album: "None" ID: "I4IF27V" ext: ".jpg" bs: ""
+17:00:35 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:35 https://i.imgur.com:443 "GET /vAYWvAh.jpg HTTP/1.1" 200 467127
+17:00:35 https://api.imgur.com:443 "GET /3/image/lNeqdPV HTTP/1.1" 200 387
+17:00:35 Imgur link: https://i.imgur.com/lNeqdPV.jpg
+17:00:36 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:36 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:36 File successfully downloaded
+17:00:36 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:36 https://api.imgur.com:443 "GET /3/image/I4IF27V HTTP/1.1" 200 373
+17:00:36 Imgur link: https://i.imgur.com/I4IF27V.png
+17:00:36 https://i.imgur.com:443 "GET /lNeqdPV.jpg HTTP/1.1" 200 628864
+17:00:36 
+SUBMISSION INFO THREAD 1
 	Initial URL: http://i.imgur.com/ljH476g.jpg
 	ID: 5gg0jf
 	Title: Cyberpunk Star Wars
-2019-06-27 16:27:41,498 Imgur ID: ljH476g
-2019-06-27 16:27:41,502 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:41,694 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:41,705 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:41,911 https://api.imgur.com:443 "GET /3/image/ljH476g HTTP/1.1" 200 380
-2019-06-27 16:27:41,925 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:42,116 https://i.imgur.com:443 "GET /ljH476g.jpg HTTP/1.1" 200 1177625
-2019-06-27 16:27:42,195 File successfully downloaded
-2019-06-27 16:27:42,201 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:42,576 File successfully downloaded
-2019-06-27 16:27:42,656 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:42,671 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:42,716 get_size gigs: '0.08'
-2019-06-27 16:27:42,717 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:36 Domain: "imgur.com/" Album: "None" ID: "ljH476g" ext: ".jpg" bs: ""
+17:00:36 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:36 File successfully downloaded
+17:00:36 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:36 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:36 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:36 https://i.imgur.com:443 "GET /I4IF27V.png HTTP/1.1" 200 13332
+17:00:36 https://api.imgur.com:443 "GET /3/image/ljH476g HTTP/1.1" 200 381
+17:00:36 Imgur link: https://i.imgur.com/ljH476g.jpg
+17:00:36 File successfully downloaded
+17:00:36 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:36 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.redd.it/ykmkij0ddzpy.png
+	ID: 63v1nb
+	Title: Low Poly Car Chase 1920x1080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:36 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://www.imgur.com/ql3o2km
+	ID: 4xd43q
+	Title: No Man's Schwifty
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:36 Domain: "imgur.com/" Album: "None" ID: "ql3o2km" ext: "None" bs: ""
+17:00:36 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:37 https://i.imgur.com:443 "GET /ljH476g.jpg HTTP/1.1" 200 1177625
+17:00:37 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:37 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:37 https://api.imgur.com:443 "GET /3/image/ql3o2km HTTP/1.1" 200 371
+17:00:37 Imgur link: https://i.imgur.com/ql3o2km.jpg
+17:00:38 File successfully downloaded
+17:00:38 Lock acquired to download file
+17:00:38 Starting new HTTPS connection (1): i.redd.it:443
+17:00:38 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/excunroaacq01.png
 	ID: 8accfb
 	Title: Japanese Fireworks
-2019-06-27 16:27:42,721 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:42,851 https://i.imgur.com:443 "GET /cal60GQ.jpg HTTP/1.1" 200 1993240
-2019-06-27 16:27:42,918 https://i.redd.it:443 "GET /excunroaacq01.png HTTP/1.1" 200 2212149
-2019-06-27 16:27:44,542 File successfully downloaded
-2019-06-27 16:27:44,550 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:44,793 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:44,799 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:44,961 File successfully downloaded
-2019-06-27 16:27:45,065 get_size gigs: '0.08'
-2019-06-27 16:27:45,066 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:38 https://i.redd.it:443 "GET /ykmkij0ddzpy.png HTTP/1.1" 200 2636981
+17:00:40 File successfully downloaded
+17:00:40 Lock released
+17:00:40 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:40 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.redd.it/yxvtrkc3crfz.jpg
+	ID: 6toxpc
+	Title: Koi Fishes
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:40 https://i.imgur.com:443 "GET /ql3o2km.jpg HTTP/1.1" 200 227520
+17:00:41 File successfully downloaded
+17:00:41 Lock acquired to download file
+17:00:41 Starting new HTTPS connection (1): i.redd.it:443
+17:00:41 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/7IgHxdh.jpg
+	ID: 4pshri
+	Title: Always one of my favourites
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:41 Domain: "imgur.com/" Album: "None" ID: "7IgHxdh" ext: ".jpg" bs: ""
+17:00:41 https://i.redd.it:443 "GET /excunroaacq01.png HTTP/1.1" 200 2212149
+17:00:41 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:41 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:41 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:41 https://api.imgur.com:443 "GET /3/image/7IgHxdh HTTP/1.1" 200 377
+17:00:41 Imgur link: https://i.imgur.com/7IgHxdh.jpg
+17:00:42 File successfully downloaded
+17:00:42 Lock released
+17:00:42 Lock acquired to download file
+17:00:42 Starting new HTTPS connection (1): i.redd.it:443
+17:00:43 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.imgur.com/nZBJAsK.jpg
 	ID: 5ohmwk
 	Title: Serenity 1920 x 1080
-2019-06-27 16:27:45,066 Imgur ID: nZBJAsK
-2019-06-27 16:27:45,069 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:45,253 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:45,258 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:45,259 https://i.imgur.com:443 "GET /pWMeE2l.jpg HTTP/1.1" 200 2113644
-2019-06-27 16:27:45,434 https://api.imgur.com:443 "GET /3/image/nZBJAsK HTTP/1.1" 200 380
-2019-06-27 16:27:45,450 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:45,851 https://i.imgur.com:443 "GET /nZBJAsK.jpg HTTP/1.1" 200 712957
-2019-06-27 16:27:46,152 File successfully downloaded
-2019-06-27 16:27:46,351 get_size gigs: '0.08'
-2019-06-27 16:27:46,352 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:43 Domain: "imgur.com/" Album: "None" ID: "nZBJAsK" ext: ".jpg" bs: ""
+17:00:43 https://i.redd.it:443 "GET /yxvtrkc3crfz.jpg HTTP/1.1" 200 188013
+17:00:43 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:43 File successfully downloaded
+17:00:43 Lock released
+17:00:43 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:43 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:43 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:43 https://i.imgur.com:443 "GET /7IgHxdh.jpg HTTP/1.1" 200 181448
+17:00:43 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://i.imgur.com/z99lTdC.png
+	ID: 3zaovb
+	Title: Low Poly Dog
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:43 Domain: "imgur.com/" Album: "None" ID: "z99lTdC" ext: ".png" bs: ""
+17:00:43 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:43 File successfully downloaded
+17:00:43 https://api.imgur.com:443 "GET /3/image/nZBJAsK HTTP/1.1" 200 377
+17:00:43 Imgur link: https://i.imgur.com/nZBJAsK.jpg
+17:00:43 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:43 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:43 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:43 https://i.imgur.com:443 "GET /nZBJAsK.jpg HTTP/1.1" 200 712957
+17:00:43 
+SUBMISSION INFO THREAD 0
+	Initial URL: https://i.imgur.com/NyOoWOg.jpg
+	ID: 751uce
+	Title: Solitude 2048x1319
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:43 Domain: "imgur.com/" Album: "None" ID: "NyOoWOg" ext: ".jpg" bs: ""
+17:00:43 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:43 https://api.imgur.com:443 "GET /3/image/z99lTdC HTTP/1.1" 200 379
+17:00:43 Imgur link: https://i.imgur.com/z99lTdC.jpg
+17:00:44 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:44 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:44 File successfully downloaded
+17:00:44 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:44 
+SUBMISSION INFO THREAD 1
 	Initial URL: http://puu.sh/n2zPL/2491975ef3.jpg
 	ID: 451vyx
 	Title: A pretty nice neon wallpaper
-2019-06-27 16:27:46,360 Starting new HTTP connection (1): puu.sh:80
-2019-06-27 16:27:46,615 http://puu.sh:80 "GET /n2zPL/2491975ef3.jpg HTTP/1.1" 200 1009873
-2019-06-27 16:27:47,074 File successfully downloaded
-2019-06-27 16:27:47,217 get_size gigs: '0.08'
-2019-06-27 16:27:47,217 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:44 https://api.imgur.com:443 "GET /3/image/NyOoWOg HTTP/1.1" 200 380
+17:00:44 Imgur link: https://i.imgur.com/NyOoWOg.jpg
+17:00:44 https://i.imgur.com:443 "GET /z99lTdC.jpg HTTP/1.1" 200 948934
+17:00:44 File successfully downloaded
+17:00:44 Lock acquired to download file
+17:00:44 Starting new HTTP connection (1): puu.sh:80
+17:00:45 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.imgur.com/PkVweyp.jpg
+	ID: a8a0i4
+	Title: Cthulhu 19201080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:45 Domain: "imgur.com/" Album: "None" ID: "PkVweyp" ext: ".jpg" bs: ""
+17:00:45 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:45 http://puu.sh:80 "GET /n2zPL/2491975ef3.jpg HTTP/1.1" 200 1009873
+17:00:45 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:45 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:45 File successfully downloaded
+17:00:45 Lock released
+17:00:45 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:45 https://api.imgur.com:443 "GET /3/image/PkVweyp HTTP/1.1" 200 383
+17:00:45 Imgur link: https://i.imgur.com/PkVweyp.jpg
+17:00:45 https://i.imgur.com:443 "GET /NyOoWOg.jpg HTTP/1.1" 200 128510
+17:00:45 
+SUBMISSION INFO THREAD 1
 	Initial URL: http://www.imgur.com/4uJeI?r
 	ID: 5u6m8h
 	Title: Windows 95 shut down screen 1920x1200
-2019-06-27 16:27:47,217 Imgur ID: 4uJeI
-2019-06-27 16:27:47,234 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:47,417 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:47,417 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:47,434 File successfully downloaded
-2019-06-27 16:27:47,434 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:47,617 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:47,617 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:47,634 https://api.imgur.com:443 "GET /3/image/4uJeI HTTP/1.1" 200 370
-2019-06-27 16:27:47,634 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:47,777 https://i.imgur.com:443 "GET /NC27TKc.jpg HTTP/1.1" 200 1813109
-2019-06-27 16:27:47,800 https://i.imgur.com:443 "GET /4uJeI.jpg HTTP/1.1" 200 103515
-2019-06-27 16:27:47,940 File successfully downloaded
-2019-06-27 16:27:48,251 get_size gigs: '0.08'
-2019-06-27 16:27:48,253 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:45 Domain: "imgur.com/" Album: "None" ID: "4uJeI" ext: "None" bs: "?r"
+17:00:45 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:45 File successfully downloaded
+17:00:45 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:45 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:45 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:45 https://i.imgur.com:443 "GET /PkVweyp.jpg HTTP/1.1" 200 771018
+17:00:46 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/Rc52LiD.jpg
+	ID: 2ino8n
+	Title: Sesame Street
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:46 Domain: "imgur.com/" Album: "None" ID: "Rc52LiD" ext: ".jpg" bs: ""
+17:00:46 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:46 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:46 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:46 File successfully downloaded
+17:00:46 
+SUBMISSION INFO THREAD 2
+	Initial URL: https://i.redd.it/s79v0pv9c1y01.png
+	ID: 8jmb8i
+	Title: Galaxy
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:46 Lock acquired to download file
+17:00:46 Starting new HTTPS connection (1): i.redd.it:443
+17:00:46 https://api.imgur.com:443 "GET /3/image/Rc52LiD HTTP/1.1" 200 377
+17:00:46 Imgur link: https://i.imgur.com/Rc52LiD.jpg
+17:00:46 https://i.redd.it:443 "GET /s79v0pv9c1y01.png HTTP/1.1" 200 625955
+17:00:47 File successfully downloaded
+17:00:47 Lock released
+17:00:47 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:47 https://api.imgur.com:443 "GET /3/image/4uJeI HTTP/1.1" 200 370
+17:00:47 Imgur link: https://i.imgur.com/4uJeI.jpg
+17:00:47 https://i.imgur.com:443 "GET /Rc52LiD.jpg HTTP/1.1" 200 349102
+17:00:47 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://i.imgur.com/J8HGklN.jpg
+	ID: 29jw6y
+	Title: Bruce Lee Preaching Motivation
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:47 Domain: "imgur.com/" Album: "None" ID: "J8HGklN" ext: ".jpg" bs: ""
+17:00:47 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:47 File successfully downloaded
+17:00:47 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:47 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:47 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:47 https://i.imgur.com:443 "GET /4uJeI.jpg HTTP/1.1" 200 103515
+17:00:47 https://api.imgur.com:443 "GET /3/image/J8HGklN HTTP/1.1" 200 379
+17:00:47 Imgur link: https://i.imgur.com/J8HGklN.jpg
+17:00:47 File successfully downloaded
+17:00:47 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:47 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://i.imgur.com/s4FyU2b.jpg
+	ID: 6js1xd
+	Title: How winter should look
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:47 Domain: "imgur.com/" Album: "None" ID: "s4FyU2b" ext: ".jpg" bs: ""
+17:00:47 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:47 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/88g2505pqbgz.jpg
 	ID: 6ub3sp
 	Title: Dragonfire 1920  1080
-2019-06-27 16:27:48,258 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:48,384 File successfully downloaded
-2019-06-27 16:27:48,384 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:48,567 https://i.redd.it:443 "GET /88g2505pqbgz.jpg HTTP/1.1" 200 556067
-2019-06-27 16:27:48,701 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:48,717 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:48,760 File successfully downloaded
-2019-06-27 16:27:48,911 https://i.imgur.com:443 "GET /wd5H1RQ.jpg HTTP/1.1" 200 2114046
-2019-06-27 16:27:49,016 get_size gigs: '0.08'
-2019-06-27 16:27:49,017 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:47 https://i.imgur.com:443 "GET /J8HGklN.jpg HTTP/1.1" 200 212305
+17:00:48 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:48 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:48 File successfully downloaded
+17:00:48 Lock acquired to download file
+17:00:48 Starting new HTTPS connection (1): i.redd.it:443
+17:00:48 https://i.redd.it:443 "GET /88g2505pqbgz.jpg HTTP/1.1" 200 556067
+17:00:48 
+SUBMISSION INFO THREAD 2
+	Initial URL: http://i.imgur.com/CFFjH48.jpg
+	ID: 3d0lux
+	Title: Empire Strikes Back meets Japan 1920x1080
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:48 Domain: "imgur.com/" Album: "None" ID: "CFFjH48" ext: ".jpg" bs: ""
+17:00:48 https://api.imgur.com:443 "GET /3/image/s4FyU2b HTTP/1.1" 200 376
+17:00:48 Imgur link: https://i.imgur.com/s4FyU2b.jpg
+17:00:48 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:48 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:48 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:48 File successfully downloaded
+17:00:48 Lock released
+17:00:48 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:48 https://i.imgur.com:443 "GET /s4FyU2b.jpg HTTP/1.1" 200 238403
+17:00:49 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/rz0vdap5e33z.jpg
 	ID: 6goa3i
 	Title: I Like Turtles 4K
-2019-06-27 16:27:49,021 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:49,434 https://i.redd.it:443 "GET /rz0vdap5e33z.jpg HTTP/1.1" 200 1570225
-2019-06-27 16:27:50,389 File successfully downloaded
-2019-06-27 16:27:50,396 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:50,659 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:50,664 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:50,728 File successfully downloaded
-2019-06-27 16:27:50,839 https://i.imgur.com:443 "GET /2b4NtIJ.jpg HTTP/1.1" 200 1737936
-2019-06-27 16:27:50,852 get_size gigs: '0.09'
-2019-06-27 16:27:50,853 
-SUBMISSION INFO
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:49 Lock acquired to download file
+17:00:49 File successfully downloaded
+17:00:49 Starting new HTTPS connection (1): i.redd.it:443
+17:00:49 https://api.imgur.com:443 "GET /3/image/CFFjH48 HTTP/1.1" 200 381
+17:00:49 Imgur link: https://i.imgur.com/CFFjH48.jpg
+17:00:49 
+SUBMISSION INFO THREAD 0
+	Initial URL: http://imgur.com/a/KOeaw
+	ID: 2s61l2
+	Title: Gotham 75K  A rare high altitude night flight above NYC produces some great photos
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:49 Domain: "imgur.com/" Album: "a/" ID: "KOeaw" ext: "None" bs: ""
+17:00:49 https://i.redd.it:443 "GET /rz0vdap5e33z.jpg HTTP/1.1" 200 1570225
+17:00:50 File successfully downloaded
+17:00:50 Lock released
+17:00:50 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:50 
+SUBMISSION INFO THREAD 1
 	Initial URL: https://i.redd.it/lvc4w3umzki01.jpg
 	ID: 80e391
 	Title: Retro Dubai
-2019-06-27 16:27:50,857 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:51,034 https://i.redd.it:443 "GET /lvc4w3umzki01.jpg HTTP/1.1" 200 1162239
-2019-06-27 16:27:51,425 File successfully downloaded
-2019-06-27 16:27:51,585 get_size gigs: '0.09'
-2019-06-27 16:27:52,295 File successfully downloaded
-2019-06-27 16:27:52,295 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:52,502 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:52,502 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:52,656 https://i.imgur.com:443 "GET /v7sEDfG.jpg HTTP/1.1" 200 1998728
-2019-06-27 16:27:53,133 File successfully downloaded
-2019-06-27 16:27:53,133 
-Finished imgur album
-2019-06-27 16:27:53,253 get_size gigs: '0.09'
-2019-06-27 16:27:53,253 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/w7ufw5eb3cuz.jpg
-	ID: 791z5k
-	Title: Street Lights in Fog
-2019-06-27 16:27:53,257 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:53,410 https://i.redd.it:443 "GET /w7ufw5eb3cuz.jpg HTTP/1.1" 200 66045
-2019-06-27 16:27:53,580 File successfully downloaded
-2019-06-27 16:27:53,711 get_size gigs: '0.09'
-2019-06-27 16:27:53,712 
-SUBMISSION INFO
-	Initial URL: https://i.redd.it/vpb7wrheztgy.jpg
-	ID: 5uynl1
-	Title: Elon Musk just tweeted this 2048x1365
-2019-06-27 16:27:53,717 Starting new HTTPS connection (1): i.redd.it:443
-2019-06-27 16:27:53,867 https://i.redd.it:443 "GET /vpb7wrheztgy.jpg HTTP/1.1" 200 452557
-2019-06-27 16:27:54,065 File successfully downloaded
-2019-06-27 16:27:54,190 get_size gigs: '0.09'
-2019-06-27 16:27:54,191 
-SUBMISSION INFO
-	Initial URL: http://i.imgur.com/gEr6TYN.jpg
-	ID: 34xl93
-	Title: Perhaps the heaviest things we lift are not our weights
-2019-06-27 16:27:54,191 Imgur ID: gEr6TYN
-2019-06-27 16:27:54,197 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:54,384 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:54,384 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:54,817 https://api.imgur.com:443 "GET /3/image/gEr6TYN HTTP/1.1" 200 380
-2019-06-27 16:27:54,834 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:55,024 https://i.imgur.com:443 "GET /gEr6TYN.jpg HTTP/1.1" 200 448019
-2019-06-27 16:27:55,224 File successfully downloaded
-2019-06-27 16:27:55,343 get_size gigs: '0.09'
-2019-06-27 16:27:55,344 
-SUBMISSION INFO
-	Initial URL: http://imgur.com/byf2gt1
-	ID: 5eheni
-	Title: Know Your Paradoxes
-2019-06-27 16:27:55,344 Imgur ID: byf2gt1
-2019-06-27 16:27:55,351 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:55,585 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
-2019-06-27 16:27:55,588 Starting new HTTPS connection (1): api.imgur.com:443
-2019-06-27 16:27:55,800 https://api.imgur.com:443 "GET /3/image/byf2gt1 HTTP/1.1" 200 391
-2019-06-27 16:27:55,800 Starting new HTTPS connection (1): i.imgur.com:443
-2019-06-27 16:27:56,034 https://i.imgur.com:443 "GET /byf2gt1.png HTTP/1.1" 200 164051
-2019-06-27 16:27:56,151 File successfully downloaded
-2019-06-27 16:27:56,291 get_size gigs: '0.09'
+	Current dir: C:\Users\ithatim\GitHub\reddit-scrape\Reddit scrape\wallpapers
+17:00:50 https://i.imgur.com:443 "GET /CFFjH48.jpg HTTP/1.1" 200 305569
+17:00:50 File successfully downloaded
+17:00:50 Locked threads for imgur album
+17:00:50 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:51 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:51 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:51 https://api.imgur.com:443 "GET /3/album/KOeaw/images HTTP/1.1" 200 886
+17:00:51 Downloading imgur album
+17:00:51 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:51 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:51 Imgur link: https://i.imgur.com/HSEvn6M.jpg
+17:00:51 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:51 https://i.imgur.com:443 "GET /HSEvn6M.jpg HTTP/1.1" 200 1879404
+17:00:53 Imgur File successfully downloaded
+17:00:53 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:53 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:53 Imgur link: https://i.imgur.com/onpWTkr.jpg
+17:00:53 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:53 https://i.imgur.com:443 "GET /onpWTkr.jpg HTTP/1.1" 200 1729755
+17:00:55 Imgur File successfully downloaded
+17:00:55 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:55 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:55 Imgur link: https://i.imgur.com/AdlyZgO.jpg
+17:00:55 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:55 https://i.imgur.com:443 "GET /AdlyZgO.jpg HTTP/1.1" 200 1838203
+17:00:57 Imgur File successfully downloaded
+17:00:57 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:57 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:57 Imgur link: https://i.imgur.com/DCVoXFL.jpg
+17:00:57 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:57 https://i.imgur.com:443 "GET /DCVoXFL.jpg HTTP/1.1" 200 1651213
+17:00:57 Imgur File successfully downloaded
+17:00:57 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:58 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:58 Imgur link: https://i.imgur.com/GncthN7.jpg
+17:00:58 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:58 https://i.imgur.com:443 "GET /GncthN7.jpg HTTP/1.1" 200 990294
+17:00:58 Imgur File successfully downloaded
+17:00:58 Starting new HTTPS connection (1): api.imgur.com:443
+17:00:59 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:00:59 Imgur link: https://i.imgur.com/I0zYjsT.jpg
+17:00:59 Starting new HTTPS connection (1): i.imgur.com:443
+17:00:59 https://i.imgur.com:443 "GET /I0zYjsT.jpg HTTP/1.1" 200 1661849
+17:01:00 Imgur File successfully downloaded
+17:01:00 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:00 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:00 Imgur link: https://i.imgur.com/mj2QAev.jpg
+17:01:00 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:01 https://i.imgur.com:443 "GET /mj2QAev.jpg HTTP/1.1" 200 1610508
+17:01:03 Imgur File successfully downloaded
+17:01:03 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:03 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:03 Imgur link: https://i.imgur.com/wYekTr5.jpg
+17:01:03 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:03 https://i.imgur.com:443 "GET /wYekTr5.jpg HTTP/1.1" 200 1557120
+17:01:04 Imgur File successfully downloaded
+17:01:04 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:04 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:04 Imgur link: https://i.imgur.com/UID37ZR.jpg
+17:01:04 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:04 https://i.imgur.com:443 "GET /UID37ZR.jpg HTTP/1.1" 200 1762334
+17:01:05 Imgur File successfully downloaded
+17:01:05 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:05 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:05 Imgur link: https://i.imgur.com/cal60GQ.jpg
+17:01:05 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:05 https://i.imgur.com:443 "GET /cal60GQ.jpg HTTP/1.1" 200 1993240
+17:01:07 Imgur File successfully downloaded
+17:01:07 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:07 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:07 Imgur link: https://i.imgur.com/pWMeE2l.jpg
+17:01:07 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:07 https://i.imgur.com:443 "GET /pWMeE2l.jpg HTTP/1.1" 200 2113644
+17:01:09 Imgur File successfully downloaded
+17:01:09 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:09 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:09 Imgur link: https://i.imgur.com/NC27TKc.jpg
+17:01:09 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:10 https://i.imgur.com:443 "GET /NC27TKc.jpg HTTP/1.1" 200 1813109
+17:01:11 Imgur File successfully downloaded
+17:01:11 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:11 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:11 Imgur link: https://i.imgur.com/wd5H1RQ.jpg
+17:01:11 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:12 https://i.imgur.com:443 "GET /wd5H1RQ.jpg HTTP/1.1" 200 2114046
+17:01:13 Imgur File successfully downloaded
+17:01:13 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:14 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:14 Imgur link: https://i.imgur.com/2b4NtIJ.jpg
+17:01:14 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:14 https://i.imgur.com:443 "GET /2b4NtIJ.jpg HTTP/1.1" 200 1737936
+17:01:15 Imgur File successfully downloaded
+17:01:15 Starting new HTTPS connection (1): api.imgur.com:443
+17:01:16 https://api.imgur.com:443 "GET /3/credits HTTP/1.1" 200 None
+17:01:16 Imgur link: https://i.imgur.com/v7sEDfG.jpg
+17:01:16 Starting new HTTPS connection (1): i.imgur.com:443
+17:01:16 https://i.imgur.com:443 "GET /v7sEDfG.jpg HTTP/1.1" 200 1998728
+17:01:17 Imgur File successfully downloaded
+17:01:17 Finished imgur album
+17:01:17 Released lock after imgur album
+17:01:17 Lock acquired to download file
+17:01:17 Starting new HTTPS connection (1): i.redd.it:443
+17:01:17 https://i.redd.it:443 "GET /lvc4w3umzki01.jpg HTTP/1.1" 200 1162239
+17:01:18 File successfully downloaded
+17:01:18 Lock released

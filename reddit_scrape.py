@@ -1,7 +1,7 @@
 #!python3
 # Mehmet Hatip API Test
 try:
-    import os, shutil, logging, sys, download, configparser, time
+    import os, shutil, logging, sys, download, configparser, time, subprocess
 except Exception as e:
     print(f'Error: {e}')
     sys.exit()
@@ -10,7 +10,8 @@ logging.basicConfig(
 filename='log.txt',
 filemode='w',
 level=logging.DEBUG,
-format='%(asctime)s %(message)s')
+format='%(asctime)s %(message)s',
+datefmt='%H:%M:%S')
 
 filename = os.path.abspath(
 os.path.join(os.path.dirname(__file__), 'settings.ini')
@@ -129,12 +130,22 @@ def delete_directory(del_dir = None):
         return f'{del_dir} successfully deleted'
 
 def test():
-    assert os.path.basename(os.getcwd()) == 'reddit-scrape'
-    delete_directory(del_dir=DATA_FILENAME)
     download.make_dir(DATA_FILENAME)
-    download.download_subreddit('wallpapers', 'top', 'all', 100, 100)
-    os.startfile('.')
-
+    try:
+        threads, posts, time = download.download_subreddit('wallpapers', 'top', 'all', 100, .1)
+    except Exception as e:
+        print(e)
+        os.chdir('..')
+        os.startfile('data.csv')
+    else:
+        os.open('.')
+        os.chdir('..')
+        import csv
+        with open('data.csv', 'a', newline='') as fin:
+            writer = csv.writer(fin, delimiter=',')
+            data = [threads, posts, time, round(posts/time, 1)]
+            writer.writerow(data)
+        os.startfile('data.csv')
 def main():
     if True:
         test()
@@ -148,10 +159,15 @@ def main():
         try:
             inp = prompt(automate)
             logging.debug(f'Input: {inp}')
-
+            curr_size = download.get_size()
+            if curr_size >= storage:
+                print(
+                f'Exceeded {curr_size} gigabytes.',
+                'Please adjust capacity from settings (s)', sep='\n')
+                automate = False
+                continue
             if inp not in ['rr','del','s','e']:
-                if download.download_subreddit(inp, SECTION, TIME_FILTER, POSTS, STORAGE):
-                    automate = False
+                download.download_subreddit(inp, SECTION, TIME_FILTER, POSTS, STORAGE)
                 while not os.path.basename(os.getcwd()) == DATA_FILENAME:
                     os.chdir("..")
             elif inp == 'rr':

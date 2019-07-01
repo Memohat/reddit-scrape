@@ -129,35 +129,7 @@ def delete_directory(del_dir = None):
     else:
         return f'{del_dir} successfully deleted'
 
-def test():
-    import random
-    path = os.path.abspath(os.path.dirname(__file__))
-    sub = 'pics'
-    for i in range(25):
-        try:
-            os.chdir(os.path.join(os.path.expanduser('~'), 'Desktop'))
-            delete_directory(DATA_FILENAME)
-            download.make_dir(DATA_FILENAME)
-            logging.info(f'Curr dir: {os.path.abspath(os.getcwd())}')
-            thread_num = int(i/5) + 1
-            threads, posts, time = download.download_subreddit(
-            sub, 'hot', 'all', 50, 1,
-            thread_num=thread_num)
-        except Exception as e:
-            print(e)
-        else:
-            os.chdir(path)
-            import csv
-            with open(r'.gitignore\\data.csv', 'a', newline='') as fin:
-                writer = csv.writer(fin, delimiter=',')
-                data = [sub, threads, posts, time, round(posts/time, 1)]
-                writer.writerow(data)
-    os.startfile('data.csv')
-
 def main():
-    if True:
-        test()
-        return
     os.chdir(os.path.join(os.path.expanduser('~'), 'Desktop'))
     download.make_dir(DATA_FILENAME)
     logging.info('Start of while loop')

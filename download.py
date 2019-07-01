@@ -93,11 +93,11 @@ def get_size(start_path=os.getcwd()):
                 except:
                     None
     gigs = total_size / 2 ** 30
-
+    logging.info(f'{gigs} gigabytes in {os.path.abspath(start_path)}')
     return gigs
 
-def download_subreddit(sub_name, section, time_filter, posts, storage):
-    if get_size() >= storage:
+def download_subreddit(sub_name, section, time_filter, posts, storage, thread_num=3):
+    if get_size(start_path='.') >= storage:
         logging.info(f'Exceeded {storage} gigabytes, exiting')
         return
     starttime = time.time()
@@ -128,7 +128,6 @@ def download_subreddit(sub_name, section, time_filter, posts, storage):
         all_subs.append(submission)
 
     logging.info('End submission download')
-    thread_num = 3
     threads = []
     thread_posts = [0] * thread_num
     sub_count = len(all_subs)
@@ -168,7 +167,7 @@ def download_subreddit(sub_name, section, time_filter, posts, storage):
     sys.stdout.write(f"\r100%\n")
     endtime = time.time()
     duration = round(endtime-starttime, 1)
-    print(f'{round(gigs, 1)}/{storage} gigabytes reached')
+    print(f'{round(gigs, 2)}/{round(storage, 2)} gigabytes reached')
     print(f'{total_posts}/{posts} posts downloaded')
     print(f'Took {duration} seconds total')
     return (thread_num, posts, duration)
@@ -251,7 +250,7 @@ def download_subs(subs, storage, ID, posts_q, gigs_q, lock):
                 status = download_file(title_url, url, text=text)
                 logging.info(status)
                 lock.release()
-        gigs = get_size()
+        gigs = get_size(start_path='.')
         i += 1
         try:
             posts_q.put((ID, i))

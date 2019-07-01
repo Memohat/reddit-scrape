@@ -7,14 +7,14 @@ except Exception as e:
     sys.exit()
 
 logging.basicConfig(
-filename='log.txt',
+filename=os.path.join('.gitignore','log.txt'),
 filemode='w',
 level=logging.DEBUG,
 format='%(asctime)s %(message)s',
 datefmt='%H:%M:%S')
 
 filename = os.path.abspath(
-os.path.join(os.path.dirname(__file__), 'settings.ini')
+os.path.join(os.path.dirname(__file__), '.gitignore', 'settings.ini')
 )
 config = configparser.ConfigParser()
 config.read(filename)
@@ -148,7 +148,7 @@ def test():
         else:
             os.chdir(path)
             import csv
-            with open('data.csv', 'a', newline='') as fin:
+            with open(r'.gitignore\\data.csv', 'a', newline='') as fin:
                 writer = csv.writer(fin, delimiter=',')
                 data = [sub, threads, posts, time, round(posts/time, 1)]
                 writer.writerow(data)

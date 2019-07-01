@@ -11,7 +11,7 @@ def clients(name, config=None):
     try:
         if not config:
             filename = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), 'client_info.ini')
+            os.path.join(os.path.dirname(__file__), '.gitignore', 'client_info.ini')
             )
             config = configparser.ConfigParser()
             config.read(filename)

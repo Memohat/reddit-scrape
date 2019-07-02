@@ -7,7 +7,7 @@ except Exception as e:
     sys.exit()
 
 logging.basicConfig(
-filename=os.path.join('.gitignore','log.txt'),
+filename=os.path.join('.gitignore','log.log'),
 filemode='w',
 level=logging.DEBUG,
 format='%(asctime)s %(message)s',

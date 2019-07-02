@@ -2,7 +2,6 @@ client_info.ini
 settings.ini
 data.csv
 log.txt
-__pycache__
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

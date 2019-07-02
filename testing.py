@@ -11,7 +11,6 @@ format='%(asctime)s %(message)s',
 datefmt='%H:%M:%S')
 
 def main():
-
     path = os.path.abspath(os.path.dirname(__file__))
     sub = 'wallpapers'
     for i in range(25):

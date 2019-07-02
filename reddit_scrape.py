@@ -19,19 +19,19 @@ logging.basicConfig(filename='log.log',
 # obtaining settings from .ini file, setting default values for arguements
 try:
     filename = os.path.join(os.path.dirname(__file__), 'settings.ini')
+    filename = os.path.abspath(filename)
     config = configparser.ConfigParser()
     config.read(filename)
     logging.info(f'Filename: \'{os.path.abspath(filename)}\'')
-except Exception as e:
-    logging.info(f'Error: {e}')
-    SUB_NAME, SECTION, TIME_FILTER, POSTS, STORAGE = 'pics', 'hot', 'all', 10, .1
-else:
     DEFAULT = config['default']
     SUB_NAME = DEFAULT.get('sub_name', 'pics')
     SECTION = DEFAULT.get('section', 'hot')
     TIME_FILTER = DEFAULT.get('time_filter', 'all')
     POSTS = DEFAULT.getint('posts', 10)
     STORAGE = DEFAULT.getfloat('storage', '.1')
+except Exception as e:
+    logging.info(f'Error: {e}')
+    SUB_NAME, SECTION, TIME_FILTER, POSTS, STORAGE = 'pics', 'hot', 'all', 10, .1
 finally:
     DATA_FILENAME = 'Reddit scrape'
 
@@ -64,7 +64,7 @@ def settings(sub_name, section, time_filter, posts, storage):
     # getting input for section
     while True:
         section = input(temp.format(msg['section'])) or section
-        if section in choices:
+        if section in sections:
             break
         logging.info('Error: Input is not in options')
 
@@ -72,7 +72,7 @@ def settings(sub_name, section, time_filter, posts, storage):
     if section not in ['new', 'hot']:
         while True:
             time_filter = input(temp.format(msg['time_filter'])) or time_filter
-            if time_filter in choices2:
+            if time_filter in time_filters:
                 break
             logging.info('Error: Input is not in options')
 
@@ -154,8 +154,6 @@ def main():
     Main function manages places of folders, as well as calling functions
     The actual content is downloaded with the downloads.py file
     """
-    # get default Desktop folder for user
-    os.chdir(os.path.join(os.path.expanduser('~'), 'Desktop'))
 
     # making DATA_FILENAME directory
     try:

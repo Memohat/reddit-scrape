@@ -1,6 +1,7 @@
 client_info.ini
 settings.ini
 data.csv
+Reddit scrape/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

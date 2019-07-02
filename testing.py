@@ -3,12 +3,10 @@
 
 import random, csv, os, download, shutil, logging
 
-logging.basicConfig(
-filename=os.path.join('.gitignore','log.txt'),
-filemode='w',
-level=logging.DEBUG,
-format='%(asctime)s %(message)s',
-datefmt='%H:%M:%S')
+logging.basicConfig(filename='log.log',
+                    filemode='w',
+                    level=logging.DEBUG,
+                    format='%(asctime)s %(message)s')
 
 def main():
     path = os.path.abspath(os.path.dirname(__file__))

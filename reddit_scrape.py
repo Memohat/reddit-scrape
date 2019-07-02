@@ -18,7 +18,7 @@ logging.basicConfig(filename='log.log',
 
 # obtaining settings from .ini file, setting default values for arguements
 try:
-    filename = 'settings.ini'
+    filename = os.path.join(os.path.dirname(__file__), 'settings.ini')
     config = configparser.ConfigParser()
     config.read(filename)
     logging.info(f'Filename: \'{os.path.abspath(filename)}\'')
@@ -173,17 +173,17 @@ def main():
             inp = prompt(automate)
             logging.debug(f'Input: {inp}')
 
-            # checking to see storage is not exceeded, resetting to input if yes
-            curr_size = d.get_size()
-            if curr_size >= storage:
-                print(f'Exceeded {curr_size} gigabytes.',
-                      'Please adjust capacity from settings (s)',
-                      sep='\n')
-                automate = False
-                continue
-
             # checking if input is custom option
             if inp not in ['rr', 'del', 's', 'e']:
+                # checking to see storage is not exceeded
+                curr_size = d.get_size()
+                if curr_size >= STORAGE:
+                    print(f'Exceeded {curr_size} gigabytes.',
+                          'Please adjust capacity from settings (s)',
+                          sep='\n')
+                    automate = False
+                    continue
+
                 d.main(inp, SECTION, TIME_FILTER, POSTS, storage=STORAGE)
                 os.startfile('.')
                 # moving back to main scrape directory

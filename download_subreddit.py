@@ -19,7 +19,7 @@ def clients(name, config=None):
     """
     try:
         if not config:
-            filename = 'client_info.ini'
+            filename = os.path.join(os.path.dirname(__file__), 'client_info.ini')
             config = configparser.ConfigParser()
             config.read(filename)
         if name == 'reddit':
@@ -317,7 +317,7 @@ def main(sub_name, section, time_filter, posts, storage=100, thread_num=3):
         else:
             sub = reddit.subreddit(sub_name)
         sub_name = clean(sub.display_name)
-        title = clean(sub.title)
+        title = sub.title
         if sub.over18:
             raise Exception('Nice try...')
     except Exception as e:

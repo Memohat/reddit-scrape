@@ -14,8 +14,7 @@ except Exception as e:
 logging.basicConfig(filename='log.log',
                     filemode='w',
                     level=logging.DEBUG,
-                    format='%(asctime)s %(message)s',
-                    datefmt='%H:%M:%S')
+                    format='%(asctime)s %(message)s')
 
 # obtaining settings from .ini file, setting default values for arguements
 try:

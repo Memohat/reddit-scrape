@@ -3,7 +3,7 @@
 try:
     import os, praw, imgurpython, logging, configparser, sys, requests, regex
     import subprocess, threading, time, queue, csv
-except e as Exception:
+except Exception as e:
     print(f'Error: {e}')
     sys.exit()
 

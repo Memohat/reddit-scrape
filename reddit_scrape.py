@@ -7,28 +7,30 @@ except Exception as e:
     sys.exit()
 
 logging.basicConfig(
-filename=os.path.join('.gitignore','log.txt'),
+filename=os.path.join('log.txt'),
 filemode='w',
 level=logging.DEBUG,
 format='%(asctime)s %(message)s',
 datefmt='%H:%M:%S')
+try: 
+    filename = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), 'settings.ini')
+    )
+    config = configparser.ConfigParser()
+    config.read(filename)
+    logging.info(f'Filename: \'{filename}\'')
 
-filename = os.path.abspath(
-os.path.join(os.path.dirname(__file__), '.gitignore', 'settings.ini')
-)
-config = configparser.ConfigParser()
-config.read(filename)
-logging.info(f'Filename: \'{filename}\'')
-
-DATA_FILENAME = 'Reddit scrape'
+    DATA_FILENAME = 'Reddit scrape'
 
 
-DEFAULT = config['default']
-SUB_NAME = DEFAULT.get('sub_name', 'pics')
-SECTION = DEFAULT.get('section', 'hot')
-TIME_FILTER = DEFAULT.get('time_filter', 'all')
-POSTS = DEFAULT.getint('posts', 10)
-STORAGE = DEFAULT.getfloat('storage', '.1')
+    DEFAULT = config['default']
+    SUB_NAME = DEFAULT.get('sub_name', 'pics')
+    SECTION = DEFAULT.get('section', 'hot')
+    TIME_FILTER = DEFAULT.get('time_filter', 'all')
+    POSTS = DEFAULT.getint('posts', 10)
+    STORAGE = DEFAULT.getfloat('storage', '.1')
+except:
+    print("settings.ini not found")
 
 def settings(sub_name, section, time_filter, posts, storage):
     logging.info('\nStarted settings')
@@ -130,7 +132,6 @@ def delete_directory(del_dir = None):
         return f'{del_dir} successfully deleted'
 
 def main():
-    os.chdir(os.path.join(os.path.expanduser('~'), 'Desktop'))
     download.make_dir(DATA_FILENAME)
     logging.info('Start of while loop')
     automate = False
